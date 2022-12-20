@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>christerbeke.com</title>
+    <title>Chris ter Beke</title>
     <link>https://christerbeke.com/</link>
-    <description>Recent content on christerbeke.com</description>
+    <description>Recent content on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://christerbeke.com/about/</link>
+      <pubDate>Tue, 20 Dec 2022 19:49:05 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/about/</guid>
+      <description>Cloud Consultant @ Binx.io (2022 - now) Link to heading Part of Xebia, Binx.io organizes your cloud journey, develops cloud native solutions, trains your teams, and provides managed cloud services. As cloud consultant, I help customers in different industries bring their applications to the cloud, specifically focussing on Google Cloud Platform.
+Read my articles on Binx.io →
+Professional Cloud Architect Certification →
+Software Architect @ Ultimaker (2017 - 2021) Link to heading Ultimaker&amp;rsquo;s mission is to accelerate the world&amp;rsquo;s transition to local manufacturing and digital distribution.</description>
+    </item>
+    
   </channel>
 </rss>

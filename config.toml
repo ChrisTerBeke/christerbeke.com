@@ -1,4 +1,45 @@
-baseURL = 'https://christerbeke.com'
-languageCode = 'en-us'
-title = 'christerbeke.com'
-theme = 'ananke'
+baseURL = "https://christerbeke.com"
+languageCode = "en-us"
+defaultcontentlanguage = "en"
+title = "Chris ter Beke"
+theme = "hugo-coder"
+
+paginate = 20
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+  author = "Chris ter Beke"
+  info = "Certified Cloud Architect and Agile Developer"
+  keywords = "blog,developer,personal"
+  avatarurl = "https://avatars3.githubusercontent.com/u/1134120?s=400&u=fe77552dc88f20e71d85826c36a4e36f123df5f8&v=4"
+  colorScheme = "dark"
+  hidecolorschemetoggle = false
+
+[params.googleTagManager]
+  id = "G-NNMPKC7KTB"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  url = "https://github.com/ChrisTerBeke/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  url = "https://www.linkedin.com/in/ctbeke"
+[[params.social]]
+  name = "Email"
+  icon = "fa fa-envelope fa-2x"
+  url = "mailto:info@christerbeke.com"
+
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
