@@ -1,0 +1,4 @@
+baseURL = 'https://christerbeke.com'
+languageCode = 'en-us'
+title = 'christerbeke.com'
+theme = 'ananke'
