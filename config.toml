@@ -4,27 +4,23 @@ defaultcontentlanguage = "en"
 title = "Chris ter Beke"
 theme = "hugo-coder"
 
-paginate = 20
-pygmentsstyle = "bw"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
 [params]
   author = "Chris ter Beke"
   info = "Certified Cloud Architect and Agile Developer"
   keywords = "blog,developer,personal"
   avatarurl = "https://avatars3.githubusercontent.com/u/1134120?s=400&u=fe77552dc88f20e71d85826c36a4e36f123df5f8&v=4"
-  colorScheme = "dark"
-  hidecolorschemetoggle = false
+  commit = "https://github.com/ChrisTerBeke/christerbeke.com/tree/"
+
+[taxonomies]
+  tag = "tags"
 
 [params.googleTagManager]
   id = "G-NNMPKC7KTB"
 
-[taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-  author = "authors"
+[markup]
+  [markup.highlight]
+    style = "github-dark"
+    tabWidth = 4
 
 [[params.social]]
   name = "Github"
@@ -41,5 +37,10 @@ pygmentscodefencesguesssyntax = true
 
 [[menu.main]]
   name = "About"
-  weight = 2
+  weight = 1
   url = "about/"
+
+[[menu.main]]
+  name = "Posts"
+  weight = 2
+  url = "posts/"
