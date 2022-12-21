@@ -2,6 +2,9 @@
 
 all: build deploy
 
+dev:
+	hugo server -D
+
 build:
 	hugo
 	git add -A
