@@ -5,7 +5,8 @@
     <link>https://christerbeke.com/</link>
     <description>Recent content on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Jul 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://christerbeke.com/about/</link>
@@ -16,6 +17,27 @@
 Read my articles on Binx.io →
 Professional Cloud Architect Certification →
 Software Architect @ Ultimaker (2017 - 2021) Link to heading Ultimaker&amp;rsquo;s mission is to accelerate the world&amp;rsquo;s transition to local manufacturing and digital distribution.</description>
+    </item>
+    
+    <item>
+      <title>A declarative approach for Dataflow Flex Templates</title>
+      <link>https://christerbeke.com/posts/gcp-dataflow-terraform/</link>
+      <pubDate>Thu, 28 Jul 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/posts/gcp-dataflow-terraform/</guid>
+      <description>This post originally appeared on Binx.io.
+Google Cloud offers a managed Apache Beam solution called Dataflow. Since some time now Dataflow has a feature called Flex Templates. Flex Templates use Docker containers instead of Dataflow&amp;rsquo;s custom templates. The benefit is that Docker is a known standard and the container can run in different environments. However, a custom metadata JSON file is still needed to point to the Docker image in your registry.</description>
+    </item>
+    
+    <item>
+      <title>A minimal setup for a high availability service using Cloud Run</title>
+      <link>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</link>
+      <pubDate>Tue, 11 Jan 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</guid>
+      <description>This post originally appeared on Binx.io.
+In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.</description>
     </item>
     
   </channel>

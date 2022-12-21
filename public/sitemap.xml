@@ -5,14 +5,25 @@
     <loc>https://christerbeke.com/about/</loc>
     <lastmod>2022-12-20T19:49:05+01:00</lastmod>
   </url><url>
-    <loc>https://christerbeke.com/authors/</loc>
-  </url><url>
-    <loc>https://christerbeke.com/categories/</loc>
+    <loc>https://christerbeke.com/posts/gcp-dataflow-terraform/</loc>
+    <lastmod>2022-07-28T08:41:01+01:00</lastmod>
   </url><url>
     <loc>https://christerbeke.com/</loc>
+    <lastmod>2022-07-28T08:41:01+01:00</lastmod>
   </url><url>
-    <loc>https://christerbeke.com/series/</loc>
+    <loc>https://christerbeke.com/tags/google-cloud-platform/</loc>
+    <lastmod>2022-07-28T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/posts/</loc>
+    <lastmod>2022-07-28T08:41:01+01:00</lastmod>
   </url><url>
     <loc>https://christerbeke.com/tags/</loc>
+    <lastmod>2022-07-28T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/tags/terraform/</loc>
+    <lastmod>2022-07-28T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</loc>
+    <lastmod>2022-01-11T08:41:01+01:00</lastmod>
   </url>
 </urlset>
