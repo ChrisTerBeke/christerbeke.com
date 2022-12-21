@@ -6,4 +6,4 @@ build:
 	git commit -am "Hugo build"
 
 deploy:
-	git push -u origin/main
+	git push -u origin main
