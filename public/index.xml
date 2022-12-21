@@ -6,7 +6,7 @@
     <description>Recent content on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jul 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Sep 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://christerbeke.com/about/</link>
@@ -17,6 +17,17 @@
 Read my articles on Binx.io →
 Professional Cloud Architect Certification →
 Software Architect @ Ultimaker (2017 - 2021) Link to heading Ultimaker&amp;rsquo;s mission is to accelerate the world&amp;rsquo;s transition to local manufacturing and digital distribution.</description>
+    </item>
+    
+    <item>
+      <title>Creating a non-classic Google Cloud Global Load Balancer with Terraform</title>
+      <link>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</link>
+      <pubDate>Fri, 16 Sep 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</guid>
+      <description>This post originally appeared on Binx.io.
+The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
+The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources.</description>
     </item>
     
     <item>
