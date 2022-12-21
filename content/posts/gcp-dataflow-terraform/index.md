@@ -62,7 +62,7 @@ The command only adds the Docker image location and some Beam SDK before uploadi
 While this works fine, it goes against the declarative approach of Terraform and other infrastructure as code tools.
 Let's see what it takes to generate and manage this metadata JSON file in Terraform:
 
-```hcl
+```terraform
 resource "google_storage_bucket_object" "flex_template_metadata" {
     bucket       = "my-unique-bucket"
     name         = "dataflow-templates/example/metadata.json"
@@ -90,7 +90,7 @@ resource "google_storage_bucket_object" "flex_template_metadata" {
 
 We can reference the storage file path in our Flex Template job:
 
-```hcl
+```terraform
 resource "google_dataflow_flex_template_job" "flex_template_job" {
     provider = google-beta
 
@@ -113,7 +113,7 @@ A change in the template data does not trigger an update of the Dataflow job.
 For this to work, we need an attribute on the Dataflow job resource to change.
 We can do this by including an MD5 hash of the file contents in the storage path:
 
-```hcl
+```terraform
 locals {
     template_content = jsonencode({
         image = "eu-docker.pkg.dev/my-gcp-project-id/dataflow-templates/example:latest"
