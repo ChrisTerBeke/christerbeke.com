@@ -26,5 +26,14 @@ The plugin sends anonymous usage statistics to Google Analytics.</description>
       <description>The Homey Enphase App adds support for Enphase Envoy gateways to Homey. This allows you to track solar production in Homey, and create automations based on it.</description>
     </item>
     
+    <item>
+      <title>Kerbal Operating System</title>
+      <link>https://christerbeke.com/projects/kerbal-operating-system/</link>
+      <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/projects/kerbal-operating-system/</guid>
+      <description>Kerbal Operating System scripts aim to make it easier to write and configure mission profiles for Kerbal Operating System. By defining models and nesting and chaining those in a mission sequence, new missions can be defined and launched with just a few lines of code.</description>
+    </item>
+    
   </channel>
 </rss>

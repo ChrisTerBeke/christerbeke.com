@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>KSP on Chris ter Beke</title>
+    <link>https://christerbeke.com/tags/ksp/</link>
+    <description>Recent content in KSP on Chris ter Beke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/ksp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kerbal Operating System</title>
+      <link>https://christerbeke.com/projects/kerbal-operating-system/</link>
+      <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/projects/kerbal-operating-system/</guid>
+      <description>Kerbal Operating System scripts aim to make it easier to write and configure mission profiles for Kerbal Operating System. By defining models and nesting and chaining those in a mission sequence, new missions can be defined and launched with just a few lines of code.</description>
+    </item>
+    
+  </channel>
+</rss>
