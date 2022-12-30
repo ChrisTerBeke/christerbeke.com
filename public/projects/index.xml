@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cura Adapter Layer Heights</title>
+      <link>https://christerbeke.com/projects/cura-adaptive-layer-heights/</link>
+      <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/projects/cura-adaptive-layer-heights/</guid>
+      <description>Adapter Layer Heights is a feature for Ultimaker Cura that automatically detects and generates the height of each layer depending on the 3D model geometry. This reduces total printing time while retaining the necessery detail in some areas of the 3D model.
+Several websites have published articles about this feature after it&amp;rsquo;s introduction:
+all3dp.com 3duniverse.org the3dprinterbee.com 3mgbonev.com More details are available in the paper I wrote that lead to it&amp;rsquo;s implementation in Cura.</description>
+    </item>
+    
+    <item>
       <title>Cura ThingiBrowser</title>
       <link>https://christerbeke.com/projects/cura-thingibrowser-plugin/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>

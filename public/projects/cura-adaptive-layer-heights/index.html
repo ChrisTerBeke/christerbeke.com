@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+  Cura Adapter Layer Heights · Chris ter Beke
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Chris ter Beke">
+<meta name="description" content="Adapter Layer Heights is a feature for Ultimaker Cura that automatically detects and generates the height of each layer depending on the 3D model geometry. This reduces total printing time while retaining the necessery detail in some areas of the 3D model.
+Several websites have published articles about this feature after it&rsquo;s introduction:
+all3dp.com 3duniverse.org the3dprinterbee.com 3mgbonev.com More details are available in the paper I wrote that lead to it&rsquo;s implementation in Cura.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cura Adapter Layer Heights"/>
+<meta name="twitter:description" content="Adapter Layer Heights is a feature for Ultimaker Cura that automatically detects and generates the height of each layer depending on the 3D model geometry. This reduces total printing time while retaining the necessery detail in some areas of the 3D model.
+Several websites have published articles about this feature after it&rsquo;s introduction:
+all3dp.com 3duniverse.org the3dprinterbee.com 3mgbonev.com More details are available in the paper I wrote that lead to it&rsquo;s implementation in Cura."/>
+
+<meta property="og:title" content="Cura Adapter Layer Heights" />
+<meta property="og:description" content="Adapter Layer Heights is a feature for Ultimaker Cura that automatically detects and generates the height of each layer depending on the 3D model geometry. This reduces total printing time while retaining the necessery detail in some areas of the 3D model.
+Several websites have published articles about this feature after it&rsquo;s introduction:
+all3dp.com 3duniverse.org the3dprinterbee.com 3mgbonev.com More details are available in the paper I wrote that lead to it&rsquo;s implementation in Cura." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://christerbeke.com/projects/cura-adaptive-layer-heights/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2022-12-30T08:41:01+01:00" />
+<meta property="article:modified_time" content="2022-12-30T08:41:01+01:00" />
+
+
+
+
+
+<link rel="canonical" href="https://christerbeke.com/projects/cura-adaptive-layer-heights/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.7f9d180e3b3bebba9ba80d55eed1255c35e00764872854736d6ad7db38884ffc.css" integrity="sha256-f50YDjs767qbqA1V7tElXDXgB2SHKFRzbWrX2ziIT/w=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.216e36d3eaf6f4cdfd67dc1200c49a8169e6478102977b3e9ac51a064c57054c.css" integrity="sha256-IW420&#43;r29M39Z9wSAMSagWnmR4ECl3s&#43;msUaBkxXBUw=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.107.0">
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Chris ter Beke
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://christerbeke.com/projects/cura-adaptive-layer-heights/">
+          Cura Adapter Layer Heights
+        </a>
+      </h1>
+    </header>
+
+    <p><a href="https://github.com/Ultimaker/CuraEngine/blob/main/src/settings/AdaptiveLayerHeights.cpp">Adapter Layer Heights</a> is a feature for <a href="https://ultimaker.com/nl/software/ultimaker-cura">Ultimaker Cura</a> that automatically detects and generates the height of each layer depending on the 3D model geometry.
+This reduces total printing time while retaining the necessery detail in some areas of the 3D model.</p>
+<p>Several websites have published articles about this feature after it&rsquo;s introduction:</p>
+<ul>
+<li><a href="https://all3dp.com/2/cura-adaptive-layers-simply-explained/">all3dp.com</a></li>
+<li><a href="https://3duniverse.org/2018/04/06/ultimaker-cura-adaptive-layers-tutorial/">3duniverse.org</a></li>
+<li><a href="https://the3dprinterbee.com/cura-adaptive-layers/">the3dprinterbee.com</a></li>
+<li><a href="https://3mgbonev.com/en/2022/05/07/cura-adaptive-layers-simply-explained/">3mgbonev.com</a></li>
+</ul>
+<p>More details are available in the <a href="./adaptive_layer_heights_v004.pdf">paper</a> I wrote that lead to it&rsquo;s implementation in Cura.</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2022
+     Chris ter Beke 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.27afce394fb6284f521b3fbc9f6a8326342333c3092267f3944d770489876fed.js" integrity="sha256-J6/OOU&#43;2KE9SGz&#43;8n2qDJjQjM8MJImfzlE13BImHb&#43;0="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNMPKC7KTB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NNMPKC7KTB');
+</script>
+
+
+  
+</body>
+
+</html>
