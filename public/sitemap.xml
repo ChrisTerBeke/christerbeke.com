@@ -2,11 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://christerbeke.com/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/tags/cura/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/projects/cura-thingibrowser-plugin/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/tags/homey/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/projects/homey-enphase/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/tags/open-source/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/projects/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
+    <loc>https://christerbeke.com/tags/</loc>
+    <lastmod>2022-12-30T08:41:01+01:00</lastmod>
+  </url><url>
     <loc>https://christerbeke.com/about/</loc>
     <lastmod>2022-12-20T19:49:05+01:00</lastmod>
-  </url><url>
-    <loc>https://christerbeke.com/</loc>
-    <lastmod>2022-09-16T08:41:01+01:00</lastmod>
   </url><url>
     <loc>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</loc>
     <lastmod>2022-09-16T08:41:01+01:00</lastmod>
@@ -15,9 +36,6 @@
     <lastmod>2022-09-16T08:41:01+01:00</lastmod>
   </url><url>
     <loc>https://christerbeke.com/posts/</loc>
-    <lastmod>2022-09-16T08:41:01+01:00</lastmod>
-  </url><url>
-    <loc>https://christerbeke.com/tags/</loc>
     <lastmod>2022-09-16T08:41:01+01:00</lastmod>
   </url><url>
     <loc>https://christerbeke.com/tags/terraform/</loc>

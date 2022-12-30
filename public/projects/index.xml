@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Chris ter Beke</title>
+    <link>https://christerbeke.com/projects/</link>
+    <description>Recent content in Projects on Chris ter Beke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cura ThingiBrowser</title>
+      <link>https://christerbeke.com/projects/cura-thingibrowser-plugin/</link>
+      <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/projects/cura-thingibrowser-plugin/</guid>
+      <description>The Cura ThingiBrowser is a Cura plugin that adds the ability to directly import 3D models from popular online repositories into Cura.
+The plugin sends anonymous usage statistics to Google Analytics.</description>
+    </item>
+    
+    <item>
+      <title>Homey Enphase</title>
+      <link>https://christerbeke.com/projects/homey-enphase/</link>
+      <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/projects/homey-enphase/</guid>
+      <description>The Homey Enphase App adds support for Enphase Envoy gateways to Homey. This allows you to track solar production in Homey, and create automations based on it.</description>
+    </item>
+    
+  </channel>
+</rss>
