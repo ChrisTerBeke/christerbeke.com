@@ -1,5 +1,4 @@
 +++ 
-draft = true
 date = 2023-01-02T16:08:13+01:00
 title = "Terraform with YAML: Part 1"
 tags = ["Google Cloud Platform", "Terraform", "YAML"]
