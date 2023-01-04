@@ -1,6 +1,5 @@
-.PHONY: all
-
-all: build
+.PHONY: dev build deploy create
+.DEFAULT_GOAL := build
 
 dev:
 	hugo server -D
