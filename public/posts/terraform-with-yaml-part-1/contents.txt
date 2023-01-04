@@ -1,0 +1,21 @@
+Part 1 (intro and basics):
+
+- Why YAML
+  - Concise syntax
+  - Native parser in Terraform
+  - Engineers not familiar with Terraform (data)
+- Simple examples
+  - Loading and parsing the YAML file
+  - Flat
+  - Loops
+
+Part 2 (advanced tricks):
+
+- Flattening nested loops
+- Merge configuration for multiple resources
+- Dynamic variable injection
+
+Part 3 (Terragrunt):
+
+- Automatically merge all YAML config files
+- Dependency output injection

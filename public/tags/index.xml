@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 16:08:13 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Cloud Platform</title>
+      <link>https://christerbeke.com/tags/google-cloud-platform/</link>
+      <pubDate>Mon, 02 Jan 2023 16:08:13 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/tags/google-cloud-platform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://christerbeke.com/tags/terraform/</link>
+      <pubDate>Mon, 02 Jan 2023 16:08:13 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YAML</title>
+      <link>https://christerbeke.com/tags/yaml/</link>
+      <pubDate>Mon, 02 Jan 2023 16:08:13 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/tags/yaml/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cura</title>
       <link>https://christerbeke.com/tags/cura/</link>
@@ -40,24 +67,6 @@
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
       
       <guid>https://christerbeke.com/tags/open-source/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Google Cloud Platform</title>
-      <link>https://christerbeke.com/tags/google-cloud-platform/</link>
-      <pubDate>Fri, 16 Sep 2022 08:41:01 +0100</pubDate>
-      
-      <guid>https://christerbeke.com/tags/google-cloud-platform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terraform</title>
-      <link>https://christerbeke.com/tags/terraform/</link>
-      <pubDate>Fri, 16 Sep 2022 08:41:01 +0100</pubDate>
-      
-      <guid>https://christerbeke.com/tags/terraform/</guid>
       <description></description>
     </item>
     
