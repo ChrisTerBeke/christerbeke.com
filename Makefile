@@ -1,4 +1,6 @@
-.PHONY: dev build create
+.PHONY: all
+
+all: build
 
 dev:
 	hugo server -D

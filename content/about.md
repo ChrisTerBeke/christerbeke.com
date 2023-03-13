@@ -3,12 +3,12 @@ title: "About"
 date: 2022-12-20T19:49:05+01:00
 ---
 
-## Cloud Consultant @ Binx.io (2022 - now)
+## Cloud Consultant @ Xebia Cloud (2022 - now)
 
-Part of [Xebia](https://xebia.com), [Binx.io](https://binx.io) organizes your cloud journey, develops cloud native solutions, trains your teams, and provides managed cloud services.
+Part of [Xebia Cloud](https://xebia.com/digital-transformation/cloud/) organizes your cloud journey, develops cloud native solutions, trains your teams, and provides managed cloud services.
 As cloud consultant, I help customers in different industries bring their applications to the cloud, specifically focussing on Google Cloud Platform.
 
-[Read my articles on Binx.io &rarr;](https://binx.io/author/chris-ter-beke/)
+[Read my articles on xebia.com &rarr;](https://xebia.com/blog/author/chris-ter-beke/)
 
 [Professional Cloud Architect Certification &rarr;](https://www.credential.net/0345e4e9-4a78-4481-a203-d8b464c0e181)
 

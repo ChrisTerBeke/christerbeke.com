@@ -24,8 +24,7 @@ Why YAML? Link to heading One of the best properties of YAML in my opinition is 
       <pubDate>Fri, 16 Sep 2022 08:41:01 +0100</pubDate>
       
       <guid>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</guid>
-      <description>This post originally appeared on Binx.io.
-The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
+      <description>The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
 The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources.</description>
     </item>
     
@@ -35,8 +34,8 @@ The Google and Terraform documentation is not clear about how to do this properl
       <pubDate>Thu, 28 Jul 2022 08:41:01 +0100</pubDate>
       
       <guid>https://christerbeke.com/posts/gcp-dataflow-terraform/</guid>
-      <description>This post originally appeared on Binx.io.
-Google Cloud offers a managed Apache Beam solution called Dataflow. Since some time now Dataflow has a feature called Flex Templates. Flex Templates use Docker containers instead of Dataflow&amp;rsquo;s custom templates. The benefit is that Docker is a known standard and the container can run in different environments. However, a custom metadata JSON file is still needed to point to the Docker image in your registry.</description>
+      <description>Google Cloud offers a managed Apache Beam solution called Dataflow. Since some time now Dataflow has a feature called Flex Templates. Flex Templates use Docker containers instead of Dataflow&amp;rsquo;s custom templates. The benefit is that Docker is a known standard and the container can run in different environments. However, a custom metadata JSON file is still needed to point to the Docker image in your registry.
+Both the CLI and the Terraform approach require you to push the Docker image to a registry.</description>
     </item>
     
     <item>
@@ -45,8 +44,7 @@ Google Cloud offers a managed Apache Beam solution called Dataflow. Since some t
       <pubDate>Tue, 11 Jan 2022 08:41:01 +0100</pubDate>
       
       <guid>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</guid>
-      <description>This post originally appeared on Binx.io.
-In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+      <description>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.</description>
     </item>
     
