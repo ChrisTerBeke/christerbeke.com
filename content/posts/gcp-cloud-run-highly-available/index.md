@@ -2,9 +2,8 @@
 date = 2022-01-11T08:41:01+01:00
 title = "A minimal setup for a high availability service using Cloud Run"
 tags = ["Google Cloud Platform", "Terraform"]
+original_url = "https://xebia.com/blog/a-minimal-setup-for-a-high-availability-service-using-cloud-run/"
 +++
-
-This post [originally appeared on Binx.io](https://binx.io/2022/01/11/a-minimal-setup-for-a-high-availability-service-using-cloud-run/).
 
 In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions.
 The main reasons to deploy your service in more than one region are:
@@ -154,5 +153,3 @@ resource "google_compute_backend_service" "backend" {
 By default, a single Cloud Run service can only be deployed in one region.
 By using a global load balancer, we can deploy a Cloud Run service in multiple regions to bring high availability and low latency.
 The `for_each` loop feature of Terraform makes this very easy to set up.
-
-This post [originally appeared on Binx.io](https://binx.io/2022/01/11/a-minimal-setup-for-a-high-availability-service-using-cloud-run/).

@@ -2,9 +2,8 @@
 date = 2022-09-16T08:41:01+01:00
 title = "Creating a non-classic Google Cloud Global Load Balancer with Terraform"
 tags = ["Google Cloud Platform", "Terraform"]
+original_url = "https://xebia.com/blog/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/"
 +++
-
-This post [originally appeared on Binx.io](https://binx.io/2022/09/16/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/).
 
 The [Google Cloud Terraform Provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) has resources to configure a Global External HTTP(S) Load Balancer.
 By default however this creates a [classic](https://cloud.google.com/load-balancing/docs/https#identifying_the_mode) load balancer, not a new one.
@@ -57,5 +56,3 @@ resource "google_compute_global_forwarding_rule" "default" {
 
 Now you know how to create a non-classic Global Load Balancer in Google Cloud using Terraform.
 The configuration is simple, but hard to find based on the available documentation.
-
-This post [originally appeared on Binx.io](https://binx.io/2022/09/16/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/).

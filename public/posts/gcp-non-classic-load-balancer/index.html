@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-  Creating a non-classic Google Cloud Global Load Balancer with Terraform · Chris ter Beke
+Creating a non-classic Google Cloud Global Load Balancer with Terraform · Chris ter Beke
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +12,17 @@
 
 
 <meta name="author" content="Chris ter Beke">
-<meta name="description" content="This post originally appeared on Binx.io.
-The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
+<meta name="description" content="The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
 The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Creating a non-classic Google Cloud Global Load Balancer with Terraform"/>
-<meta name="twitter:description" content="This post originally appeared on Binx.io.
-The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
+<meta name="twitter:description" content="The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
 The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources."/>
 
 <meta property="og:title" content="Creating a non-classic Google Cloud Global Load Balancer with Terraform" />
-<meta property="og:description" content="This post originally appeared on Binx.io.
-The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
+<meta property="og:description" content="The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
 The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://christerbeke.com/posts/gcp-non-classic-load-balancer/" /><meta property="article:section" content="posts" />
@@ -36,7 +33,7 @@ The Google and Terraform documentation is not clear about how to do this properl
 
 
 
-<link rel="canonical" href="https://christerbeke.com/posts/gcp-non-classic-load-balancer/">
+<link rel="canonical" href="https://xebia.com/blog/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/">
 
 
 <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
@@ -77,7 +74,6 @@ The Google and Terraform documentation is not clear about how to do this properl
 
 
 <meta name="generator" content="Hugo 0.107.0">
-
 
 
 
@@ -134,32 +130,32 @@ The Google and Terraform documentation is not clear about how to do this properl
 
     <div class="content">
       
-  <section class="container post">
+<section class="container post">
     <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://christerbeke.com/posts/gcp-non-classic-load-balancer/">
-              Creating a non-classic Google Cloud Global Load Balancer with Terraform
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime="2022-09-16T08:41:01&#43;01:00">
-                September 16, 2022
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              2-minute read
-            </span>
-          </div>
-          
-          
-          <div class="tags">
+        <header>
+            <div class="post-title">
+                <h1 class="title">
+                    <a class="title-link" href="https://christerbeke.com/posts/gcp-non-classic-load-balancer/">
+                        Creating a non-classic Google Cloud Global Load Balancer with Terraform
+                    </a>
+                </h1>
+            </div>
+            <div class="post-meta">
+                <div class="date">
+                    <span class="posted-on">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <time datetime=" 2022-09-16T08:41:01&#43;01:00">
+                            September 16, 2022
+                        </time>
+                    </span>
+                    <span class="reading-time">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        One-minute read
+                    </span>
+                </div>
+                
+                
+                <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/google-cloud-platform/">Google Cloud Platform</a>
@@ -169,13 +165,18 @@ The Google and Terraform documentation is not clear about how to do this properl
       <a href="/tags/terraform/">Terraform</a>
     </span></div>
 
-        </div>
-      </header>
+            </div>
+        </header>
 
-      <div class="post-content">
-        
-        <p>This post <a href="https://binx.io/2022/09/16/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/">originally appeared on Binx.io</a>.</p>
-<p>The <a href="https://registry.terraform.io/providers/hashicorp/google/latest/docs">Google Cloud Terraform Provider</a> has resources to configure a Global External HTTP(S) Load Balancer.
+        <p>
+            
+            This post originally appeared on <a href="https://xebia.com/blog/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/" target="_blank">another website</a>.
+            
+        </p>
+
+        <div class="post-content">
+            
+            <p>The <a href="https://registry.terraform.io/providers/hashicorp/google/latest/docs">Google Cloud Terraform Provider</a> has resources to configure a Global External HTTP(S) Load Balancer.
 By default however this creates a <a href="https://cloud.google.com/load-balancing/docs/https#identifying_the_mode">classic</a> load balancer, not a new one.
 For new features like <a href="https://cloud.google.com/load-balancing/docs/https/traffic-management-global">traffic management</a> you cannot use the classic load balancer, so you definitely want to use the new one.</p>
 <p>The Google and Terraform documentation is not clear about how to do this properly.
@@ -220,23 +221,23 @@ The name <code>classic</code> does not even appear once on the documentation pag
 </h2>
 <p>Now you know how to create a non-classic Global Load Balancer in Google Cloud using Terraform.
 The configuration is simple, but hard to find based on the available documentation.</p>
-<p>This post <a href="https://binx.io/2022/09/16/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/">originally appeared on Binx.io</a>.</p>
 
-      </div>
-
-
-      <footer>
-        
+        </div>
 
 
-        
-        
-        
-      </footer>
+
+        <footer>
+            
+
+
+            
+            
+            
+        </footer>
     </article>
 
     
-  </section>
+</section>
 
     </div>
 

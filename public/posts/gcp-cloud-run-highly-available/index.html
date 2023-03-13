@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>
-  A minimal setup for a high availability service using Cloud Run · Chris ter Beke
+A minimal setup for a high availability service using Cloud Run · Chris ter Beke
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +12,17 @@
 
 
 <meta name="author" content="Chris ter Beke">
-<meta name="description" content="This post originally appeared on Binx.io.
-In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+<meta name="description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.">
 <meta name="keywords" content="blog,developer,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="A minimal setup for a high availability service using Cloud Run"/>
-<meta name="twitter:description" content="This post originally appeared on Binx.io.
-In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+<meta name="twitter:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions."/>
 
 <meta property="og:title" content="A minimal setup for a high availability service using Cloud Run" />
-<meta property="og:description" content="This post originally appeared on Binx.io.
-In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+<meta property="og:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://christerbeke.com/posts/gcp-cloud-run-highly-available/" /><meta property="article:section" content="posts" />
@@ -36,7 +33,7 @@ Handle single-region failures so that your application is highly available. Rout
 
 
 
-<link rel="canonical" href="https://christerbeke.com/posts/gcp-cloud-run-highly-available/">
+<link rel="canonical" href="https://xebia.com/blog/a-minimal-setup-for-a-high-availability-service-using-cloud-run/">
 
 
 <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
@@ -77,7 +74,6 @@ Handle single-region failures so that your application is highly available. Rout
 
 
 <meta name="generator" content="Hugo 0.107.0">
-
 
 
 
@@ -134,32 +130,32 @@ Handle single-region failures so that your application is highly available. Rout
 
     <div class="content">
       
-  <section class="container post">
+<section class="container post">
     <article>
-      <header>
-        <div class="post-title">
-          <h1 class="title">
-            <a class="title-link" href="https://christerbeke.com/posts/gcp-cloud-run-highly-available/">
-              A minimal setup for a high availability service using Cloud Run
-            </a>
-          </h1>
-        </div>
-        <div class="post-meta">
-          <div class="date">
-            <span class="posted-on">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
-              <time datetime="2022-01-11T08:41:01&#43;01:00">
-                January 11, 2022
-              </time>
-            </span>
-            <span class="reading-time">
-              <i class="fa fa-clock-o" aria-hidden="true"></i>
-              4-minute read
-            </span>
-          </div>
-          
-          
-          <div class="tags">
+        <header>
+            <div class="post-title">
+                <h1 class="title">
+                    <a class="title-link" href="https://christerbeke.com/posts/gcp-cloud-run-highly-available/">
+                        A minimal setup for a high availability service using Cloud Run
+                    </a>
+                </h1>
+            </div>
+            <div class="post-meta">
+                <div class="date">
+                    <span class="posted-on">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <time datetime=" 2022-01-11T08:41:01&#43;01:00">
+                            January 11, 2022
+                        </time>
+                    </span>
+                    <span class="reading-time">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        4-minute read
+                    </span>
+                </div>
+                
+                
+                <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/google-cloud-platform/">Google Cloud Platform</a>
@@ -169,13 +165,18 @@ Handle single-region failures so that your application is highly available. Rout
       <a href="/tags/terraform/">Terraform</a>
     </span></div>
 
-        </div>
-      </header>
+            </div>
+        </header>
 
-      <div class="post-content">
-        
-        <p>This post <a href="https://binx.io/2022/01/11/a-minimal-setup-for-a-high-availability-service-using-cloud-run/">originally appeared on Binx.io</a>.</p>
-<p>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions.
+        <p>
+            
+            This post originally appeared on <a href="https://xebia.com/blog/a-minimal-setup-for-a-high-availability-service-using-cloud-run/" target="_blank">another website</a>.
+            
+        </p>
+
+        <div class="post-content">
+            
+            <p>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions.
 The main reasons to deploy your service in more than one region are:</p>
 <ul>
 <li>Handle single-region failures so that your application is highly available.</li>
@@ -323,23 +324,23 @@ Cloud CDN will automatically detect which routes are static resources, but you c
 <p>By default, a single Cloud Run service can only be deployed in one region.
 By using a global load balancer, we can deploy a Cloud Run service in multiple regions to bring high availability and low latency.
 The <code>for_each</code> loop feature of Terraform makes this very easy to set up.</p>
-<p>This post <a href="https://binx.io/2022/01/11/a-minimal-setup-for-a-high-availability-service-using-cloud-run/">originally appeared on Binx.io</a>.</p>
 
-      </div>
-
-
-      <footer>
-        
+        </div>
 
 
-        
-        
-        
-      </footer>
+
+        <footer>
+            
+
+
+            
+            
+            
+        </footer>
     </article>
 
     
-  </section>
+</section>
 
     </div>
 
