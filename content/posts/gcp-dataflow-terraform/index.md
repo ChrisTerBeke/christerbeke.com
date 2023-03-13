@@ -2,9 +2,8 @@
 date = 2022-07-28T08:41:01+01:00
 title = "A declarative approach for Dataflow Flex Templates"
 tags = ["Google Cloud Platform", "Terraform"]
+original_url = "https://xebia.com/blog/a-declarative-approach-for-dataflow-flex-templates/"
 +++
-
-This post [originally appeared on Binx.io](https://binx.io/2022/07/28/a-declarative-approach-for-dataflow-flex-templates/).
 
 Google Cloud offers a managed Apache Beam solution called Dataflow.
 Since some time now Dataflow has a feature called Flex Templates.
