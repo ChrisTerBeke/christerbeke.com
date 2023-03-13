@@ -56,5 +56,3 @@ resource "google_compute_global_forwarding_rule" "default" {
 
 Now you know how to create a non-classic Global Load Balancer in Google Cloud using Terraform.
 The configuration is simple, but hard to find based on the available documentation.
-
-This post [originally appeared on Binx.io](https://binx.io/2022/09/16/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/).

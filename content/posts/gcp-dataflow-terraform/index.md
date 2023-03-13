@@ -154,5 +154,3 @@ We can replicate this behavior using Terraform code.
 This allows for a 100% declarative infrastructure-as-code solution.
 
 For a full code example, check my Dataflow Flex Terraform module on [GitHub](https://github.com/ChrisTerBeke/terraform-playground/tree/main/terraform/modules/gcp_dataflow_flex).
-
-This post [originally appeared on Binx.io](https://binx.io/2022/07/28/a-declarative-approach-for-dataflow-flex-templates/).
