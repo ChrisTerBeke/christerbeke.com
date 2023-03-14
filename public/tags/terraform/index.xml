@@ -6,11 +6,11 @@
     <description>Recent content in Terraform on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 02 Jan 2023 16:08:13 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraform with YAML: Part 1</title>
       <link>https://christerbeke.com/posts/terraform-with-yaml-part-1/</link>
-      <pubDate>Mon, 02 Jan 2023 16:08:13 +0100</pubDate>
+      <pubDate>Tue, 14 Mar 2023 08:00:00 +0100</pubDate>
       
       <guid>https://christerbeke.com/posts/terraform-with-yaml-part-1/</guid>
       <description>This post is the first in a series of three about supercharging your Terraform setup using YAML.
