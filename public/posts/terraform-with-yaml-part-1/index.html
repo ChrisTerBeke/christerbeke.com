@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+  Terraform with YAML: Part 1 · Chris ter Beke
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Chris ter Beke">
+<meta name="description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
+Infrastructure as Code (IaC) &hellip;
+Why YAML? Link to heading One of the best properties of YAML in my opinition is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let&rsquo;s look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Terraform with YAML: Part 1"/>
+<meta name="twitter:description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
+Infrastructure as Code (IaC) &hellip;
+Why YAML? Link to heading One of the best properties of YAML in my opinition is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let&rsquo;s look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:"/>
+
+<meta property="og:title" content="Terraform with YAML: Part 1" />
+<meta property="og:description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
+Infrastructure as Code (IaC) &hellip;
+Why YAML? Link to heading One of the best properties of YAML in my opinition is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let&rsquo;s look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://christerbeke.com/posts/terraform-with-yaml-part-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-02T16:08:13+01:00" />
+<meta property="article:modified_time" content="2023-01-02T16:08:13+01:00" />
+
+
+
+
+
+<link rel="canonical" href="https://christerbeke.com/posts/terraform-with-yaml-part-1/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.7f9d180e3b3bebba9ba80d55eed1255c35e00764872854736d6ad7db38884ffc.css" integrity="sha256-f50YDjs767qbqA1V7tElXDXgB2SHKFRzbWrX2ziIT/w=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.216e36d3eaf6f4cdfd67dc1200c49a8169e6478102977b3e9ac51a064c57054c.css" integrity="sha256-IW420&#43;r29M39Z9wSAMSagWnmR4ECl3s&#43;msUaBkxXBUw=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.107.0">
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Chris ter Beke
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://christerbeke.com/posts/terraform-with-yaml-part-1/">
+              Terraform with YAML: Part 1
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-01-02T16:08:13&#43;01:00">
+                January 2, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/google-cloud-platform/">Google Cloud Platform</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/terraform/">Terraform</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/yaml/">YAML</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>This post is the first in a series of three about supercharging your Terraform setup using YAML.</p>
+<p>Infrastructure as Code (IaC) &hellip;</p>
+<h2 id="why-yaml">
+  Why YAML?
+  <a class="heading-link" href="#why-yaml">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>One of the best properties of YAML in my opinition is the absence of syntax overhead.
+It allows you to consicely write down parameters and values.
+Let&rsquo;s look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+</span></span><span style="display:flex;"><span>  config = {
+</span></span><span style="display:flex;"><span>    topics = [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        name = <span style="color:#a5d6ff">&#34;my-topic&#34;</span>
+</span></span><span style="display:flex;"><span>        labels = {
+</span></span><span style="display:flex;"><span>          environment = <span style="color:#a5d6ff">&#34;prod&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        subscriptions = [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            name          = <span style="color:#a5d6ff">&#34;my-subscription&#34;</span>
+</span></span><span style="display:flex;"><span>            push_endpoint = <span style="color:#a5d6ff">&#34;https://example.com/push&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">topics</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-topic</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">labels</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">environment</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">prod</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">subscriptions</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-subription</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><p>As you can see, the difference in number of lines is quite large.
+Of course this will change once we add some HCL code to import the YAML configuration, but it quickly adds up when your infrastructure grows.</p>
+<p>Loading and converting the YAML file to HCL is very easy.
+You can do it in one line even using the <code>yamldecode</code> and <code>file</code> functions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+</span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The result is an HCL represenation of the same data as shown in the earlier example.</p>
+<p>For this particular example, the total number of lines of code using plain HCL is 18, of which 9 are purely syntax.
+The total number of lines using YAML, including the loading and parsing of the file, is 9.
+That&rsquo;s a 50% reduction!</p>
+<p>For more information about YAML decoding in Terraform, check the <a href="https://developer.hashicorp.com/terraform/language/functions/yamldecode">official documentation</a>.</p>
+<p>Another benefit of YAML over HCL is familiarity.
+Many engineers that do not work on infrastructure are not familiar with the HCL syntax and it&rsquo;s quirks.
+YAML on the other hand is so simple and widely used that almost every engineer has used it in their career at some point.
+This means that if your repository contains YAML for infrastructure configuration, other types of engineers can easily adjust the configuration and deploy it (preferrably using a CI/CD pipeline and proper code review).
+This provides a self-sufficient environment for application or data teams that work on top of the base infrastructure.</p>
+<h2 id="a-simple-example">
+  A simple example
+  <a class="heading-link" href="#a-simple-example">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Let&rsquo;s build a fully working example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">id</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-project-id</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">region</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">europe-west4</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">bucket</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-123</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">EU</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
+</span></span><span style="display:flex;"><span>  required_providers {
+</span></span><span style="display:flex;"><span>    google = {
+</span></span><span style="display:flex;"><span>      source  = <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
+</span></span><span style="display:flex;"><span>      version = <span style="color:#a5d6ff">&#34;4.47.0&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>locals {
+</span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">provider</span> <span style="color:#a5d6ff">&#34;google&#34;</span> {
+</span></span><span style="display:flex;"><span>  project = config.project.id
+</span></span><span style="display:flex;"><span>  region  = config.project.region
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_storage_bucket&#34;</span> <span style="color:#a5d6ff">&#34;bucket&#34;</span> {
+</span></span><span style="display:flex;"><span>  name          = config.bucket.name
+</span></span><span style="display:flex;"><span>  location      = config.bucket.location
+</span></span><span style="display:flex;"><span>  force_destroy = config.bucket.force_destroy
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, we create and configure a Cloud Storage bucket.
+We use two separate root objects (<code>project</code> and <code>bucket</code>) to keep the config tidy and readable.</p>
+<h2 id="using-loops">
+  Using loops
+  <a class="heading-link" href="#using-loops">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Often we want to configure multiple resources, for example different storage buckets for different applications.
+Let&rsquo;s adjust the example above to use a <code>for_each</code> loop:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">id</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-project-id</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">region</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">europe-west4</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">buckets</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-123</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">EU</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-456</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">US</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">false</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
+</span></span><span style="display:flex;"><span>  required_providers {
+</span></span><span style="display:flex;"><span>    google = {
+</span></span><span style="display:flex;"><span>      source  = <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
+</span></span><span style="display:flex;"><span>      version = <span style="color:#a5d6ff">&#34;4.47.0&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>locals {
+</span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">provider</span> <span style="color:#a5d6ff">&#34;google&#34;</span> {
+</span></span><span style="display:flex;"><span>  project = config.project.id
+</span></span><span style="display:flex;"><span>  region  = config.project.region
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_storage_bucket&#34;</span> <span style="color:#a5d6ff">&#34;bucket&#34;</span> {
+</span></span><span style="display:flex;"><span>  for_each = toset(config.buckets)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  name          = each.value.name
+</span></span><span style="display:flex;"><span>  location      = each.value.location
+</span></span><span style="display:flex;"><span>  force_destroy = each.value.force_destroy
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>As you can see, with minimal extra code, we can now provision as many buckets as we want.</p>
+<h2 id="up-next">
+  Up next
+  <a class="heading-link" href="#up-next">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Now we have a basic understanding of the benefits of using YAML configuration files in your Terraform code.
+In the next post in this series we will dive into more advanced topics, like how to deal with nested loops, creating multiple resource types from a single YAML configuration, and dynamic variable injection and templating.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     Chris ter Beke 
+    ·
+    
+    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.27afce394fb6284f521b3fbc9f6a8326342333c3092267f3944d770489876fed.js" integrity="sha256-J6/OOU&#43;2KE9SGz&#43;8n2qDJjQjM8MJImfzlE13BImHb&#43;0="></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNMPKC7KTB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NNMPKC7KTB');
+</script>
+
+
+  
+</body>
+
+</html>

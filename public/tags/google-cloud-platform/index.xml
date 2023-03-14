@@ -6,7 +6,18 @@
     <description>Recent content in Google Cloud Platform on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Sep 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 16:08:13 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform with YAML: Part 1</title>
+      <link>https://christerbeke.com/posts/terraform-with-yaml-part-1/</link>
+      <pubDate>Mon, 02 Jan 2023 16:08:13 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/posts/terraform-with-yaml-part-1/</guid>
+      <description>This post is the first in a series of three about supercharging your Terraform setup using YAML.
+Infrastructure as Code (IaC) &amp;hellip;
+Why YAML? Link to heading One of the best properties of YAML in my opinition is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let&amp;rsquo;s look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:</description>
+    </item>
+    
     <item>
       <title>Creating a non-classic Google Cloud Global Load Balancer with Terraform</title>
       <link>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</link>
