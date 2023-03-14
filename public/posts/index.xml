@@ -14,8 +14,7 @@
       
       <guid>https://christerbeke.com/posts/terraform-with-yaml-part-1/</guid>
       <description>This post is the first in a series of three about supercharging your Terraform setup using YAML.
-Infrastructure as Code (IaC) &amp;hellip;
-Why YAML? Link to heading One of the best properties of YAML in my opinition is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let&amp;rsquo;s look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:</description>
+Terraform is one of the most common tools to provision infrastructure from code or configuration. However it&amp;rsquo;s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.</description>
     </item>
     
     <item>
