@@ -2,17 +2,20 @@
 date = 2023-01-02T16:08:13+01:00
 title = "Terraform with YAML: Part 1"
 tags = ["Google Cloud Platform", "Terraform", "YAML"]
+original_url = "https://xebia.com/...."
 +++
 
-This post is the first in a series of three about supercharging your Terraform setup using YAML.
+> This post is the first in a series of three about supercharging your Terraform setup using YAML.
 
-Infrastructure as Code (IaC) ...
+Terraform is one of the most common tools to provision infrastructure from code or configuration.
+However it's using a custom language called [HCL (Hashicorp Configuration Language)](https://github.com/hashicorp/hcl).
+In this blog post we will explore how we can replace as much HCL code as possible with [YAML](https://yaml.org) and what the benefits are of doing so.
 
 ## Why YAML?
 
-One of the best properties of YAML in my opinition is the absence of syntax overhead.
+One of the best properties of YAML in my opinion is the absence of syntax overhead.
 It allows you to consicely write down parameters and values.
-Let's look at a comparison of some Terraform (HCL) code and YAML where we configure some Google Pub/Sub topics and subscriptions:
+Let's look at a comparison of some HCL code and YAML where we configure some Google Pub/Sub topics and subscriptions:
 
 ```terraform
 locals {
@@ -165,3 +168,4 @@ As you can see, with minimal extra code, we can now provision as many buckets as
 
 Now we have a basic understanding of the benefits of using YAML configuration files in your Terraform code.
 In the next post in this series we will dive into more advanced topics, like how to deal with nested loops, creating multiple resource types from a single YAML configuration, and dynamic variable injection and templating.
+As a bonus we will look into validating YAML files using a schema to get early feedback on the configuration without having to run a Terraform plan.
