@@ -1,5 +1,4 @@
 +++ 
-draft = true
 date = 2023-04-05T11:22:10+02:00
 title = "Guarantee unique keys in Terraform"
 tags = ["Terraform"]
