@@ -4,6 +4,11 @@ defaultcontentlanguage = "en"
 title = "Chris ter Beke"
 theme = "hugo-coder"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' google-analytics.com googletagmanager.com githubusercontent.com;"
+
 [params]
   author = "Chris ter Beke"
   info = "Certified Cloud Architect and Agile Developer"
