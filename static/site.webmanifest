@@ -1,0 +1,7 @@
+{
+    "name": "christerbeke.com",
+    "short_name": "christerbeke.com",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
