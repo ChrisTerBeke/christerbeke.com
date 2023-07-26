@@ -2,6 +2,7 @@
 date = 2023-04-05T11:22:10+02:00
 title = "Guarantee unique keys in Terraform"
 tags = ["Terraform"]
+original_url = "https://xebia.com/blog/guarantee-unique-keys-in-terraform/"
 +++
 
 When using Terraform to dynamically create resources based on lists of maps you probaby have run into this issue.
