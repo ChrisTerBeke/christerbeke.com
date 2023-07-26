@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Apr 2023 11:22:10 +0200</lastBuildDate><atom:link href="https://christerbeke.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jul 2023 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terraform with YAML: Part 2</title>
+      <link>https://christerbeke.com/posts/terraform-with-yaml-part-2/</link>
+      <pubDate>Fri, 14 Jul 2023 08:00:00 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/posts/terraform-with-yaml-part-2/</guid>
+      <description>This post is the second in a series of three about supercharging your Terraform setup using YAML.
+In part one of this series we learned how to use YAML to simplify the configuration of Terraform resources. We mainly focussed on reducing syntax overhead of the HCL language and making the configuration accessible to non-infra engineers.
+In this second part we will dive into some more advanced techniques and patterns.</description>
+    </item>
+    
     <item>
       <title>Guarantee unique keys in Terraform</title>
       <link>https://christerbeke.com/posts/terraform-unique-keys/</link>
