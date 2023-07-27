@@ -5,54 +5,58 @@ title = "Chris ter Beke"
 theme = "hugo-coder"
 
 [[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' google-analytics.com googletagmanager.com githubusercontent.com;"
+for = "/*"
+[headers.values]
+Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' google-analytics.com googletagmanager.com githubusercontent.com;"
 
 [params]
-  author = "Chris ter Beke"
-  info = "Certified Cloud Architect and Agile Developer"
-  description = "Certified Cloud Architect and Agile Developer"
-  keywords = "blog,developer,personal"
-  avatarurl = "https://avatars3.githubusercontent.com/u/1134120?s=400&u=fe77552dc88f20e71d85826c36a4e36f123df5f8&v=4"
-  commit = "https://github.com/ChrisTerBeke/christerbeke.com/tree/"
-  colorScheme = "auto"
+author = "Chris ter Beke"
+info = "Certified Cloud Architect and Agile Developer"
+description = "Certified Cloud Architect and Agile Developer"
+keywords = "blog,developer,personal"
+avatarurl = "https://avatars3.githubusercontent.com/u/1134120?s=400&u=fe77552dc88f20e71d85826c36a4e36f123df5f8&v=4"
+commit = "https://github.com/ChrisTerBeke/christerbeke.com/tree/"
+colorScheme = "auto"
 
 [taxonomies]
-  tag = "tags"
+tag = "tags"
 
 [params.googleTagManager]
-  id = "G-NNMPKC7KTB"
+id = "G-NNMPKC7KTB"
 
 [markup]
-  [markup.highlight]
-    style = "github-dark"
-    tabWidth = 4
+[markup.highlight]
+style = "github-dark"
+tabWidth = 4
 
 [[params.social]]
-  name = "Github"
-  icon = "fa fa-github fa-2x"
-  url = "https://github.com/ChrisTerBeke/"
+name = "Github"
+icon = "fa fa-github fa-2x"
+url = "https://github.com/ChrisTerBeke/"
 [[params.social]]
-  name = "LinkedIn"
-  icon = "fa fa-linkedin fa-2x"
-  url = "https://www.linkedin.com/in/ctbeke"
+name = "LinkedIn"
+icon = "fa fa-linkedin fa-2x"
+url = "https://www.linkedin.com/in/ctbeke"
 [[params.social]]
-  name = "Email"
-  icon = "fa fa-envelope fa-2x"
-  url = "mailto:info@christerbeke.com"
+name = "X"
+icon = "fa fa-twitter fa-2x"
+url = "http://x.com/ctbeke"
+[[params.social]]
+name = "Email"
+icon = "fa fa-envelope fa-2x"
+url = "mailto:info@christerbeke.com"
 
 [[menu.main]]
-  name = "About"
-  weight = 1
-  url = "about/"
+name = "About"
+weight = 1
+url = "about/"
 
 [[menu.main]]
-  name = "Projects"
-  weight = 2
-  url = "projects/"
+name = "Projects"
+weight = 2
+url = "projects/"
 
 [[menu.main]]
-  name = "Blog"
-  weight = 3
-  url = "posts/"
+name = "Blog"
+weight = 3
+url = "posts/"
