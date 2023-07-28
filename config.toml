@@ -36,11 +36,11 @@ url = "https://github.com/ChrisTerBeke/"
 [[params.social]]
 name = "LinkedIn"
 icon = "fa fa-linkedin fa-2x"
-url = "https://www.linkedin.com/in/ctbeke"
+url = "https://www.linkedin.com/in/christerbeke"
 [[params.social]]
 name = "X"
 icon = "fa fa-twitter fa-2x"
-url = "http://x.com/ctbeke"
+url = "http://twitter.com/christerbeke"
 [[params.social]]
 name = "Email"
 icon = "fa fa-envelope fa-2x"
