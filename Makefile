@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: build
+all: build deploy
 
 dev:
 	hugo server -D
