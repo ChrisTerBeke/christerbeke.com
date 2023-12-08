@@ -6,7 +6,17 @@
     <description>Recent content on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jul 2023 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Requirements</title>
+      <link>https://christerbeke.com/bits/on-requirements/</link>
+      <pubDate>Tue, 05 Dec 2023 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/bits/on-requirements/</guid>
+      <description>When working in or with growing companies, you start to notice that the amount of requirements grows as well. Often these requirements are fuzzy and it is unclear who wrote them in the first place. Before you know it your product has all kinds complexity from requirements that weren&amp;rsquo;t neccesery in the first place. How to fix this?
+Question every requirement When discussing existing or incoming requirements, decide first if the requirement makes sense at all.</description>
+    </item>
+    
     <item>
       <title>Terraform with YAML: Part 2</title>
       <link>https://christerbeke.com/posts/terraform-with-yaml-part-2/</link>
