@@ -17,6 +17,8 @@ Questions you can ask to determine this include:
 - Does it add user value to your product or service?
 - Does it conflict with other requirements?
 
+If the answer to any of these questions is no, then ignore or refine the requirement.
+
 **Every requirement needs a name**
 
 A big problem with requirements is that they start to live their own life in an organization.
