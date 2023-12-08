@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-Guarantee unique keys in Terraform · Chris ter Beke
+
+<head>
+  <title>
+  Guarantee unique keys in Terraform · Chris ter Beke
 </title>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 
@@ -41,7 +42,7 @@ locals = { members = [ { member = &#34;contact@christerbeke.com&#34; resource = 
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7f9d180e3b3bebba9ba80d55eed1255c35e00764872854736d6ad7db38884ffc.css" integrity="sha256-f50YDjs767qbqA1V7tElXDXgB2SHKFRzbWrX2ziIT/w=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -51,7 +52,7 @@ locals = { members = [ { member = &#34;contact@christerbeke.com&#34; resource = 
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.216e36d3eaf6f4cdfd67dc1200c49a8169e6478102977b3e9ac51a064c57054c.css" integrity="sha256-IW420&#43;r29M39Z9wSAMSagWnmR4ECl3s&#43;msUaBkxXBUw=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -61,6 +62,7 @@ locals = { members = [ { member = &#34;contact@christerbeke.com&#34; resource = 
 
 
 
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
@@ -73,12 +75,12 @@ locals = { members = [ { member = &#34;contact@christerbeke.com&#34; resource = 
 
 
 
-<meta name="generator" content="Hugo 0.107.0">
 
 
 
 
-  </head>
+
+</head>
 
 
 
@@ -120,10 +122,6 @@ locals = { members = [ { member = &#34;contact@christerbeke.com&#34; resource = 
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
           
-            <li class="navigation-item">
-              <a class="navigation-link" href="/bits/">Bits</a>
-            </li>
-          
         
         
       </ul>
@@ -134,49 +132,43 @@ locals = { members = [ { member = &#34;contact@christerbeke.com&#34; resource = 
 
     <div class="content">
       
-<section class="container post">
+  <section class="container post">
     <article>
-        <header>
-            <div class="post-title">
-                <h1 class="title">
-                    <a class="title-link" href="https://christerbeke.com/posts/terraform-unique-keys/">
-                        Guarantee unique keys in Terraform
-                    </a>
-                </h1>
-            </div>
-            <div class="post-meta">
-                <div class="date">
-                    <span class="posted-on">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <time datetime=" 2023-04-05T11:22:10&#43;02:00">
-                            April 5, 2023
-                        </time>
-                    </span>
-                    <span class="reading-time">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        2-minute read
-                    </span>
-                </div>
-                
-                
-                <div class="tags">
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://christerbeke.com/posts/terraform-unique-keys/">
+              Guarantee unique keys in Terraform
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-04-05T11:22:10&#43;02:00">
+                April 5, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              2-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/terraform/">Terraform</a>
     </span></div>
 
-            </div>
-        </header>
+        </div>
+      </header>
 
-        <p>
-            
-            This post is also published on <a href="https://xebia.com/blog/guarantee-unique-keys-in-terraform/" target="_blank">another website</a>.
-            
-        </p>
-
-        <div class="post-content">
-            
-            <p>When using Terraform to dynamically create resources based on lists of maps you probaby have run into this issue.
+      <div class="post-content">
+        
+        <p>When using Terraform to dynamically create resources based on lists of maps you probaby have run into this issue.
 Consider the following list of maps that represents IAM access on a generic cloud resource:</p>
 <div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-hcl" data-lang="hcl"><span style="display:flex;"><span>locals <span style="color:#ff7b72;font-weight:bold">=</span> {
 </span></span><span style="display:flex;"><span>    members <span style="color:#ff7b72;font-weight:bold">=</span> [
@@ -225,22 +217,23 @@ To solve this, and get predictable key lengths, we can use an md5 hash:</p>
 </span></span></code></pre></div><p>Now you know a simple trick to convert a list of maps into an iterable map with unique keys.</p>
 <p>As a bonus you now get alerted about duplicate list entries, as they would result in dulicate map keys causing Terraform to throw an error!</p>
 
-        </div>
+      </div>
 
 
+      <footer>
+        
 
-        <footer>
-            
 
-
-            
-            
-            
-        </footer>
+        
+        
+        
+        
+        
+      </footer>
     </article>
 
     
-</section>
+  </section>
 
     </div>
 
@@ -252,7 +245,7 @@ To solve this, and get predictable key lengths, we can use an md5 hash:</p>
      Chris ter Beke 
     ·
     
-    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
@@ -263,7 +256,14 @@ To solve this, and get predictable key lengths, we can use an md5 hash:</p>
 
   
   
-  <script src="/js/coder.min.27afce394fb6284f521b3fbc9f6a8326342333c3092267f3944d770489876fed.js" integrity="sha256-J6/OOU&#43;2KE9SGz&#43;8n2qDJjQjM8MJImfzlE13BImHb&#43;0="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
   
 
   
@@ -290,6 +290,16 @@ To solve this, and get predictable key lengths, we can use an md5 hash:</p>
   gtag('config', 'G-NNMPKC7KTB');
 </script>
 
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 </body>

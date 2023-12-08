@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-Terraform with YAML: Part 2 · Chris ter Beke
+
+<head>
+  <title>
+  Terraform with YAML: Part 2 · Chris ter Beke
 </title>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 
@@ -44,7 +45,7 @@ In this second part we will dive into some more advanced techniques and patterns
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7f9d180e3b3bebba9ba80d55eed1255c35e00764872854736d6ad7db38884ffc.css" integrity="sha256-f50YDjs767qbqA1V7tElXDXgB2SHKFRzbWrX2ziIT/w=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -54,7 +55,7 @@ In this second part we will dive into some more advanced techniques and patterns
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.216e36d3eaf6f4cdfd67dc1200c49a8169e6478102977b3e9ac51a064c57054c.css" integrity="sha256-IW420&#43;r29M39Z9wSAMSagWnmR4ECl3s&#43;msUaBkxXBUw=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -64,6 +65,7 @@ In this second part we will dive into some more advanced techniques and patterns
 
 
 
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
@@ -76,12 +78,12 @@ In this second part we will dive into some more advanced techniques and patterns
 
 
 
-<meta name="generator" content="Hugo 0.107.0">
 
 
 
 
-  </head>
+
+</head>
 
 
 
@@ -123,10 +125,6 @@ In this second part we will dive into some more advanced techniques and patterns
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
           
-            <li class="navigation-item">
-              <a class="navigation-link" href="/bits/">Bits</a>
-            </li>
-          
         
         
       </ul>
@@ -137,32 +135,32 @@ In this second part we will dive into some more advanced techniques and patterns
 
     <div class="content">
       
-<section class="container post">
+  <section class="container post">
     <article>
-        <header>
-            <div class="post-title">
-                <h1 class="title">
-                    <a class="title-link" href="https://christerbeke.com/posts/terraform-with-yaml-part-2/">
-                        Terraform with YAML: Part 2
-                    </a>
-                </h1>
-            </div>
-            <div class="post-meta">
-                <div class="date">
-                    <span class="posted-on">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <time datetime=" 2023-07-14T08:00:00&#43;01:00">
-                            July 14, 2023
-                        </time>
-                    </span>
-                    <span class="reading-time">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        3-minute read
-                    </span>
-                </div>
-                
-                
-                <div class="tags">
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://christerbeke.com/posts/terraform-with-yaml-part-2/">
+              Terraform with YAML: Part 2
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-07-14T08:00:00&#43;01:00">
+                July 14, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/google-cloud-platform/">Google Cloud Platform</a>
@@ -176,18 +174,12 @@ In this second part we will dive into some more advanced techniques and patterns
       <a href="/tags/yaml/">YAML</a>
     </span></div>
 
-            </div>
-        </header>
+        </div>
+      </header>
 
-        <p>
-            
-            This post is also published on <a href="https://xebia.com/blog/terraform-with-yaml-part-2" target="_blank">another website</a>.
-            
-        </p>
-
-        <div class="post-content">
-            
-            <blockquote>
+      <div class="post-content">
+        
+        <blockquote>
 <p>This post is the second in a series of three about supercharging your Terraform setup using YAML.</p>
 </blockquote>
 <p>In part one of this series we learned how to use YAML to simplify the configuration of Terraform resources.
@@ -200,7 +192,7 @@ We mainly focussed on reducing syntax overhead of the HCL language and making th
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>A powerful feature of Terraform is <a href="https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks">dynamic blocks</a>.
+<p>A powerful feature of Terraform is <a href="https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks"  class="external-link" target="_blank" rel="noopener">dynamic blocks</a>.
 They allow you to specify multiple nested blocks by looping over a set or map.</p>
 <p>In the following example we add a lifecycle rule to a storage bucket that automatically deletes objects after 3 days.
 We also add a lifecycle rule to automatically abort an incomplete upload after 1 day.</p>
@@ -333,22 +325,23 @@ This reduces the amount of locations in the code you need to touch in order to c
 In the next and final part of this series, we will dive into templating and schema validation.
 We&rsquo;ll also have a quick look at how to automate the injection of YAML config files using Terragrunt.</p>
 
-        </div>
+      </div>
 
 
+      <footer>
+        
 
-        <footer>
-            
 
-
-            
-            
-            
-        </footer>
+        
+        
+        
+        
+        
+      </footer>
     </article>
 
     
-</section>
+  </section>
 
     </div>
 
@@ -360,7 +353,7 @@ We&rsquo;ll also have a quick look at how to automate the injection of YAML conf
      Chris ter Beke 
     ·
     
-    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
@@ -371,7 +364,14 @@ We&rsquo;ll also have a quick look at how to automate the injection of YAML conf
 
   
   
-  <script src="/js/coder.min.27afce394fb6284f521b3fbc9f6a8326342333c3092267f3944d770489876fed.js" integrity="sha256-J6/OOU&#43;2KE9SGz&#43;8n2qDJjQjM8MJImfzlE13BImHb&#43;0="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
   
 
   
@@ -398,6 +398,16 @@ We&rsquo;ll also have a quick look at how to automate the injection of YAML conf
   gtag('config', 'G-NNMPKC7KTB');
 </script>
 
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 </body>

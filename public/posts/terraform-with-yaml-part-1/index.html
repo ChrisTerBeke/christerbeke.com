@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-Terraform with YAML: Part 1 · Chris ter Beke
+
+<head>
+  <title>
+  Terraform with YAML: Part 1 · Chris ter Beke
 </title>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 
@@ -41,7 +42,7 @@ Terraform is one of the most common tools to provision infrastructure from code 
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7f9d180e3b3bebba9ba80d55eed1255c35e00764872854736d6ad7db38884ffc.css" integrity="sha256-f50YDjs767qbqA1V7tElXDXgB2SHKFRzbWrX2ziIT/w=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -51,7 +52,7 @@ Terraform is one of the most common tools to provision infrastructure from code 
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.216e36d3eaf6f4cdfd67dc1200c49a8169e6478102977b3e9ac51a064c57054c.css" integrity="sha256-IW420&#43;r29M39Z9wSAMSagWnmR4ECl3s&#43;msUaBkxXBUw=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -61,6 +62,7 @@ Terraform is one of the most common tools to provision infrastructure from code 
 
 
 
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
@@ -73,12 +75,12 @@ Terraform is one of the most common tools to provision infrastructure from code 
 
 
 
-<meta name="generator" content="Hugo 0.107.0">
 
 
 
 
-  </head>
+
+</head>
 
 
 
@@ -120,10 +122,6 @@ Terraform is one of the most common tools to provision infrastructure from code 
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
           
-            <li class="navigation-item">
-              <a class="navigation-link" href="/bits/">Bits</a>
-            </li>
-          
         
         
       </ul>
@@ -134,32 +132,32 @@ Terraform is one of the most common tools to provision infrastructure from code 
 
     <div class="content">
       
-<section class="container post">
+  <section class="container post">
     <article>
-        <header>
-            <div class="post-title">
-                <h1 class="title">
-                    <a class="title-link" href="https://christerbeke.com/posts/terraform-with-yaml-part-1/">
-                        Terraform with YAML: Part 1
-                    </a>
-                </h1>
-            </div>
-            <div class="post-meta">
-                <div class="date">
-                    <span class="posted-on">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <time datetime=" 2023-03-14T08:00:00&#43;01:00">
-                            March 14, 2023
-                        </time>
-                    </span>
-                    <span class="reading-time">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        4-minute read
-                    </span>
-                </div>
-                
-                
-                <div class="tags">
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://christerbeke.com/posts/terraform-with-yaml-part-1/">
+              Terraform with YAML: Part 1
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-03-14T08:00:00&#43;01:00">
+                March 14, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/google-cloud-platform/">Google Cloud Platform</a>
@@ -173,23 +171,17 @@ Terraform is one of the most common tools to provision infrastructure from code 
       <a href="/tags/yaml/">YAML</a>
     </span></div>
 
-            </div>
-        </header>
+        </div>
+      </header>
 
-        <p>
-            
-            This post is also published on <a href="https://xebia.com/blog/terraform-with-yaml-part-1" target="_blank">another website</a>.
-            
-        </p>
-
-        <div class="post-content">
-            
-            <blockquote>
+      <div class="post-content">
+        
+        <blockquote>
 <p>This post is the first in a series of three about supercharging your Terraform setup using YAML.</p>
 </blockquote>
 <p>Terraform is one of the most common tools to provision infrastructure from code or configuration.
-However it&rsquo;s using a custom language called <a href="https://github.com/hashicorp/hcl">HCL (Hashicorp Configuration Language)</a>.
-In this blog post we will explore how we can replace as much HCL code as possible with <a href="https://yaml.org">YAML</a> and what the benefits are of doing so.</p>
+However it&rsquo;s using a custom language called <a href="https://github.com/hashicorp/hcl"  class="external-link" target="_blank" rel="noopener">HCL (Hashicorp Configuration Language)</a>.
+In this blog post we will explore how we can replace as much HCL code as possible with <a href="https://yaml.org"  class="external-link" target="_blank" rel="noopener">YAML</a> and what the benefits are of doing so.</p>
 <h2 id="why-yaml">
   Why YAML?
   <a class="heading-link" href="#why-yaml">
@@ -235,7 +227,7 @@ You can do it in one line even using the <code>yamldecode</code> and <code>file<
 <p>For this particular example, the total number of lines of code using plain HCL is 18, of which 9 are purely syntax.
 The total number of lines using YAML, including the loading and parsing of the file, is 9.
 That&rsquo;s a 50% reduction!</p>
-<p>For more information about YAML decoding in Terraform, check the <a href="https://developer.hashicorp.com/terraform/language/functions/yamldecode">official documentation</a>.</p>
+<p>For more information about YAML decoding in Terraform, check the <a href="https://developer.hashicorp.com/terraform/language/functions/yamldecode"  class="external-link" target="_blank" rel="noopener">official documentation</a>.</p>
 <p>Another benefit of YAML over HCL is familiarity.
 Many engineers that do not work on infrastructure are not familiar with the HCL syntax and it&rsquo;s quirks.
 YAML on the other hand is so simple and widely used that almost every engineer has used it in their career at some point.
@@ -337,22 +329,23 @@ Let&rsquo;s adjust the example above to use a <code>for_each</code> loop:</p>
 In the next post in this series we will dive into more advanced topics, like how to deal with nested loops, creating multiple resource types from a single YAML configuration, and dynamic variable injection and templating.
 As a bonus we will look into validating YAML files using a schema to get early feedback on the configuration without having to run a Terraform plan.</p>
 
-        </div>
+      </div>
 
 
+      <footer>
+        
 
-        <footer>
-            
 
-
-            
-            
-            
-        </footer>
+        
+        
+        
+        
+        
+      </footer>
     </article>
 
     
-</section>
+  </section>
 
     </div>
 
@@ -364,7 +357,7 @@ As a bonus we will look into validating YAML files using a schema to get early f
      Chris ter Beke 
     ·
     
-    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
@@ -375,7 +368,14 @@ As a bonus we will look into validating YAML files using a schema to get early f
 
   
   
-  <script src="/js/coder.min.27afce394fb6284f521b3fbc9f6a8326342333c3092267f3944d770489876fed.js" integrity="sha256-J6/OOU&#43;2KE9SGz&#43;8n2qDJjQjM8MJImfzlE13BImHb&#43;0="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
   
 
   
@@ -402,6 +402,16 @@ As a bonus we will look into validating YAML files using a schema to get early f
   gtag('config', 'G-NNMPKC7KTB');
 </script>
 
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 </body>

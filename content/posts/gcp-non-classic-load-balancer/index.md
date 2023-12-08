@@ -2,7 +2,7 @@
 date = 2022-09-16T08:41:01+01:00
 title = "Creating a non-classic Google Cloud Global Load Balancer with Terraform"
 tags = ["Google Cloud Platform", "Terraform"]
-original_url = "https://xebia.com/blog/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/"
+canonicalUrl = "https://xebia.com/blog/creating-a-non-classic-google-cloud-global-load-balancer-with-terraform/"
 +++
 
 The [Google Cloud Terraform Provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) has resources to configure a Global External HTTP(S) Load Balancer.

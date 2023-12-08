@@ -39,12 +39,8 @@ icon = "fa fa-linkedin fa-2x"
 url = "https://www.linkedin.com/in/ChrisTerBeke"
 [[params.social]]
 name = "X"
-icon = "fa fa-x-twitter fa-2x"
+icon = "fa fa-twitter fa-2x"
 url = "https://x.com/ChrisTerBeke"
-[[params.social]]
-name = "Email"
-icon = "fa fa-envelope fa-2x"
-url = "mailto:info@christerbeke.com"
 
 [[menu.main]]
 name = "About"
@@ -60,8 +56,3 @@ url = "projects/"
 name = "Blog"
 weight = 3
 url = "posts/"
-
-[[menu.main]]
-name = "Bits"
-weight = 4
-url = "bits/"

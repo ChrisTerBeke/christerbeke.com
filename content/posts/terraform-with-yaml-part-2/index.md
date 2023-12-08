@@ -2,7 +2,7 @@
 date = 2023-07-14T08:00:00+01:00
 title = "Terraform with YAML: Part 2"
 tags = ["Google Cloud Platform", "Terraform", "YAML"]
-original_url = "https://xebia.com/blog/terraform-with-yaml-part-2"
+canonicalUrl = "https://xebia.com/blog/terraform-with-yaml-part-2"
 +++
 
 > This post is the second in a series of three about supercharging your Terraform setup using YAML.

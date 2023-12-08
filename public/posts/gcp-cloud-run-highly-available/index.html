@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-A minimal setup for a high availability service using Cloud Run · Chris ter Beke
+
+<head>
+  <title>
+  A minimal setup for a high availability service using Cloud Run · Chris ter Beke
 </title>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
 
@@ -41,7 +42,7 @@ Handle single-region failures so that your application is highly available. Rout
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.7f9d180e3b3bebba9ba80d55eed1255c35e00764872854736d6ad7db38884ffc.css" integrity="sha256-f50YDjs767qbqA1V7tElXDXgB2SHKFRzbWrX2ziIT/w=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -51,7 +52,7 @@ Handle single-region failures so that your application is highly available. Rout
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.216e36d3eaf6f4cdfd67dc1200c49a8169e6478102977b3e9ac51a064c57054c.css" integrity="sha256-IW420&#43;r29M39Z9wSAMSagWnmR4ECl3s&#43;msUaBkxXBUw=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -61,6 +62,7 @@ Handle single-region failures so that your application is highly available. Rout
 
 
 
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
 
@@ -73,12 +75,12 @@ Handle single-region failures so that your application is highly available. Rout
 
 
 
-<meta name="generator" content="Hugo 0.107.0">
 
 
 
 
-  </head>
+
+</head>
 
 
 
@@ -120,10 +122,6 @@ Handle single-region failures so that your application is highly available. Rout
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
           
-            <li class="navigation-item">
-              <a class="navigation-link" href="/bits/">Bits</a>
-            </li>
-          
         
         
       </ul>
@@ -134,32 +132,32 @@ Handle single-region failures so that your application is highly available. Rout
 
     <div class="content">
       
-<section class="container post">
+  <section class="container post">
     <article>
-        <header>
-            <div class="post-title">
-                <h1 class="title">
-                    <a class="title-link" href="https://christerbeke.com/posts/gcp-cloud-run-highly-available/">
-                        A minimal setup for a high availability service using Cloud Run
-                    </a>
-                </h1>
-            </div>
-            <div class="post-meta">
-                <div class="date">
-                    <span class="posted-on">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <time datetime=" 2022-01-11T08:41:01&#43;01:00">
-                            January 11, 2022
-                        </time>
-                    </span>
-                    <span class="reading-time">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        4-minute read
-                    </span>
-                </div>
-                
-                
-                <div class="tags">
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://christerbeke.com/posts/gcp-cloud-run-highly-available/">
+              A minimal setup for a high availability service using Cloud Run
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2022-01-11T08:41:01&#43;01:00">
+                January 11, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
   <i class="fa fa-tag" aria-hidden="true"></i>
     <span class="tag">
       <a href="/tags/google-cloud-platform/">Google Cloud Platform</a>
@@ -169,18 +167,12 @@ Handle single-region failures so that your application is highly available. Rout
       <a href="/tags/terraform/">Terraform</a>
     </span></div>
 
-            </div>
-        </header>
+        </div>
+      </header>
 
-        <p>
-            
-            This post is also published on <a href="https://xebia.com/blog/a-minimal-setup-for-a-high-availability-service-using-cloud-run/" target="_blank">another website</a>.
-            
-        </p>
-
-        <div class="post-content">
-            
-            <p>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions.
+      <div class="post-content">
+        
+        <p>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions.
 The main reasons to deploy your service in more than one region are:</p>
 <ul>
 <li>Handle single-region failures so that your application is highly available.</li>
@@ -220,7 +212,7 @@ Luckily using a Terraform <code>for_each</code> loop, this does not add too much
 </h2>
 <p>By default, Cloud Run gives a service a publicly available <code>.run.app</code> URL.
 However this points to a single Cloud Run service, and for a multi-region set we will need multiple services.
-To do this, we will need to create a Global Load Balancer that uses <a href="https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts">Serverless Network Endpoint Groups</a> (NEGs) as backend.
+To do this, we will need to create a Global Load Balancer that uses <a href="https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts"  class="external-link" target="_blank" rel="noopener">Serverless Network Endpoint Groups</a> (NEGs) as backend.
 These NEGs then route the traffic to the Cloud Run instances.</p>
 <p>Let’s set up the needed resource for our ingress stack:</p>
 <div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_compute_global_address&#34;</span> <span style="color:#a5d6ff">&#34;ip&#34;</span> {
@@ -329,22 +321,23 @@ Cloud CDN will automatically detect which routes are static resources, but you c
 By using a global load balancer, we can deploy a Cloud Run service in multiple regions to bring high availability and low latency.
 The <code>for_each</code> loop feature of Terraform makes this very easy to set up.</p>
 
-        </div>
+      </div>
 
 
+      <footer>
+        
 
-        <footer>
-            
 
-
-            
-            
-            
-        </footer>
+        
+        
+        
+        
+        
+      </footer>
     </article>
 
     
-</section>
+  </section>
 
     </div>
 
@@ -356,7 +349,7 @@ The <code>for_each</code> loop feature of Terraform makes this very easy to set 
      Chris ter Beke 
     ·
     
-    Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
     
   </section>
 </footer>
@@ -367,7 +360,14 @@ The <code>for_each</code> loop feature of Terraform makes this very easy to set 
 
   
   
-  <script src="/js/coder.min.27afce394fb6284f521b3fbc9f6a8326342333c3092267f3944d770489876fed.js" integrity="sha256-J6/OOU&#43;2KE9SGz&#43;8n2qDJjQjM8MJImfzlE13BImHb&#43;0="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
   
 
   
@@ -394,6 +394,16 @@ The <code>for_each</code> loop feature of Terraform makes this very easy to set 
   gtag('config', 'G-NNMPKC7KTB');
 </script>
 
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 </body>

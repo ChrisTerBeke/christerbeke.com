@@ -2,7 +2,7 @@
 date = 2022-01-11T08:41:01+01:00
 title = "A minimal setup for a high availability service using Cloud Run"
 tags = ["Google Cloud Platform", "Terraform"]
-original_url = "https://xebia.com/blog/a-minimal-setup-for-a-high-availability-service-using-cloud-run/"
+canonicalUrl = "https://xebia.com/blog/a-minimal-setup-for-a-high-availability-service-using-cloud-run/"
 +++
 
 In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions.

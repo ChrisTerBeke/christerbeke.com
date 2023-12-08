@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bits on Chris ter Beke</title>
+    <link>https://christerbeke.com/bits/</link>
+    <description>Recent content in Bits on Chris ter Beke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 05 Dec 2023 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/bits/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Requirements</title>
+      <link>https://christerbeke.com/bits/on-requirements/</link>
+      <pubDate>Tue, 05 Dec 2023 08:41:01 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/bits/on-requirements/</guid>
+      <description>When working in or with growing companies, you start to notice that the amount of requirements grows as well. Often these requirements are fuzzy and it is unclear who wrote them in the first place. Before you know it your product has all kinds complexity from requirements that weren&amp;rsquo;t neccesery in the first place. How to fix this?
+Question every requirement When discussing existing or incoming requirements, decide first if the requirement makes sense at all.</description>
+    </item>
+    
+  </channel>
+</rss>
