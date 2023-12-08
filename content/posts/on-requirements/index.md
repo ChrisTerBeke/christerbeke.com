@@ -29,7 +29,7 @@ This person is responsible and accountable for the existance of the requirement,
 **Minimize the amount of non-functional requirements**
 
 Over time, the amount of requirements that are non-functional (not targeting end-users of the product or service) grows.
-These are often covering topics like security, standards, design systems, system architecture, and vendor management.
+These often cover topics like security, standards, design systems, system architecture, and vendor management.
 While these can be great enablers, they can also reduce a team's independence and ability to move fast.
 A better way would be to treat these as recommendations rather than requirements.
 If a team sees another tool or way-of-working that fits better with their culture and product, they should be allowed to use it.
