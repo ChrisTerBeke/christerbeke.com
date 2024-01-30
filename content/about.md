@@ -3,6 +3,12 @@ title: "About"
 date: 2022-12-20T19:49:05+01:00
 ---
 
+## Writer @ The Progressive Architect (2024 - now)
+
+The Progressive Architect focuses on how leaders and architects in the technology field should address friction points, delivery overhead, minimize waste, provide optimal abstractions and help teams to operate autonomously — ranging from large enterprises to start-ups.
+
+[Read our articles on Substack](https://theprogressivearchitect.substack.com/)
+
 ## Cloud Consultant @ Xebia Cloud (2022 - now)
 
 Part of [Xebia Cloud](https://xebia.com/digital-transformation/cloud/) organizes your cloud journey, develops cloud native solutions, trains your teams, and provides managed cloud services.
