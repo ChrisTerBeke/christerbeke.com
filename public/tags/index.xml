@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jul 2023 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Google Cloud Platform</title>
-      <link>https://christerbeke.com/tags/google-cloud-platform/</link>
-      <pubDate>Fri, 14 Jul 2023 08:00:00 +0100</pubDate>
+      <title>Open Source</title>
+      <link>https://christerbeke.com/tags/open-source/</link>
+      <pubDate>Mon, 04 Mar 2024 08:00:00 +0100</pubDate>
       
-      <guid>https://christerbeke.com/tags/google-cloud-platform/</guid>
+      <guid>https://christerbeke.com/tags/open-source/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
       <link>https://christerbeke.com/tags/terraform/</link>
-      <pubDate>Fri, 14 Jul 2023 08:00:00 +0100</pubDate>
+      <pubDate>Mon, 04 Mar 2024 08:00:00 +0100</pubDate>
       
       <guid>https://christerbeke.com/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google Cloud Platform</title>
+      <link>https://christerbeke.com/tags/google-cloud-platform/</link>
+      <pubDate>Fri, 14 Jul 2023 08:00:00 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/tags/google-cloud-platform/</guid>
       <description></description>
     </item>
     
@@ -58,15 +67,6 @@
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
       
       <guid>https://christerbeke.com/tags/ksp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Open Source</title>
-      <link>https://christerbeke.com/tags/open-source/</link>
-      <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
-      
-      <guid>https://christerbeke.com/tags/open-source/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,18 @@
     <description>Recent content in Open Source on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tfversion</title>
+      <link>https://christerbeke.com/projects/tfversion/</link>
+      <pubDate>Mon, 04 Mar 2024 08:00:00 +0100</pubDate>
+      
+      <guid>https://christerbeke.com/projects/tfversion/</guid>
+      <description>tfversion is an open source Terraform version management tool. As consultant in the field of Cloud and Infrastructure, we use multiple versions of Terraform on a daily basis. We found that existing tools to easily switch between versions were not intuitive or maintained well. So together with Bruno Schaatsbergen, we built our own.
+The easiest way to get started with tfversion is using Homebrew:
+brew install tfversion/tap/tfversion Then you can run the following commands to install and use a version:</description>
+    </item>
+    
     <item>
       <title>Cura Adapter Layer Heights</title>
       <link>https://christerbeke.com/projects/cura-adaptive-layer-heights/</link>
