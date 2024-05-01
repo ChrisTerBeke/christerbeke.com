@@ -11,7 +11,7 @@ Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' goog
 
 [params]
 author = "Chris ter Beke"
-info = "Challenge - Subtract - Simplify - Accelerate - Automate"
+info = "Challenge, Subtract, Simplify, Accelerate, Automate"
 description = "Certified Cloud Architect and Agile Developer"
 keywords = "blog,developer,personal"
 avatarurl = "https://avatars3.githubusercontent.com/u/1134120?s=400&u=fe77552dc88f20e71d85826c36a4e36f123df5f8&v=4"
@@ -31,15 +31,15 @@ tabWidth = 4
 
 [[params.social]]
 name = "Github"
-icon = "fa fa-github fa-2x"
+icon = "fa fa-brands fa-github fa-2x"
 url = "https://github.com/ChrisTerBeke/"
 [[params.social]]
 name = "LinkedIn"
-icon = "fa fa-linkedin fa-2x"
+icon = "fa fa-brands fa-linkedin fa-2x"
 url = "https://www.linkedin.com/in/ChrisTerBeke"
 [[params.social]]
 name = "X"
-icon = "fa fa-twitter fa-2x"
+icon = "fa fa-brands fa-x-twitter fa-2x"
 url = "https://x.com/ChrisTerBeke"
 
 [[menu.main]]

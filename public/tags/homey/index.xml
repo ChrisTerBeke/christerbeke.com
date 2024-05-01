@@ -6,8 +6,15 @@
     <description>Recent content in Homey on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 08:00:00 +0100</lastBuildDate>
     <atom:link href="https://christerbeke.com/tags/homey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homey Uponor</title>
+      <link>https://christerbeke.com/projects/homey-uponor/</link>
+      <pubDate>Wed, 01 May 2024 08:00:00 +0100</pubDate>
+      <guid>https://christerbeke.com/projects/homey-uponor/</guid>
+      <description>The Homey Uponor Smatrix App adds support for Uponor Smatrix to Homey. This allows you to monitor and control your underfloor heating thermostats for every room.</description>
+    </item>
     <item>
       <title>Homey Enphase</title>
       <link>https://christerbeke.com/projects/homey-enphase/</link>
