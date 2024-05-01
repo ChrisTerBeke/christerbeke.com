@@ -6,56 +6,42 @@
     <description>Recent content in Open Source on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Mar 2024 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Mar 2024 08:00:00 +0100</lastBuildDate>
+    <atom:link href="https://christerbeke.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tfversion</title>
       <link>https://christerbeke.com/projects/tfversion/</link>
       <pubDate>Mon, 04 Mar 2024 08:00:00 +0100</pubDate>
-      
       <guid>https://christerbeke.com/projects/tfversion/</guid>
-      <description>tfversion is an open source Terraform version management tool. As consultant in the field of Cloud and Infrastructure, we use multiple versions of Terraform on a daily basis. We found that existing tools to easily switch between versions were not intuitive or maintained well. So together with Bruno Schaatsbergen, we built our own.
-The easiest way to get started with tfversion is using Homebrew:
-brew install tfversion/tap/tfversion Then you can run the following commands to install and use a version:</description>
+      <description>tfversion is an open source Terraform version management tool. As consultant in the field of Cloud and Infrastructure, we use multiple versions of Terraform on a daily basis. We found that existing tools to easily switch between versions were not intuitive or maintained well. So together with Bruno Schaatsbergen, we built our own.&#xA;The easiest way to get started with tfversion is using Homebrew:&#xA;brew install tfversion/tap/tfversion Then you can run the following commands to install and use a version:</description>
     </item>
-    
     <item>
       <title>Cura Adapter Layer Heights</title>
       <link>https://christerbeke.com/projects/cura-adaptive-layer-heights/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/projects/cura-adaptive-layer-heights/</guid>
-      <description>Adapter Layer Heights is a feature for Ultimaker Cura that automatically detects and generates the height of each layer depending on the 3D model geometry. This reduces total printing time while retaining the necessery detail in some areas of the 3D model.
-Several websites have published articles about this feature after it&amp;rsquo;s introduction:
-all3dp.com 3duniverse.org the3dprinterbee.com 3mgbonev.com More details are available in the paper I wrote that lead to it&amp;rsquo;s implementation in Cura.</description>
+      <description>Adapter Layer Heights is a feature for Ultimaker Cura that automatically detects and generates the height of each layer depending on the 3D model geometry. This reduces total printing time while retaining the necessery detail in some areas of the 3D model.&#xA;Several websites have published articles about this feature after it&amp;rsquo;s introduction:&#xA;all3dp.com 3duniverse.org the3dprinterbee.com 3mgbonev.com More details are available in the paper I wrote that lead to it&amp;rsquo;s implementation in Cura.</description>
     </item>
-    
     <item>
       <title>Cura ThingiBrowser</title>
       <link>https://christerbeke.com/projects/cura-thingibrowser-plugin/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/projects/cura-thingibrowser-plugin/</guid>
-      <description>The Cura ThingiBrowser is a Cura plugin that adds the ability to directly import 3D models from popular online repositories into Cura.
-The plugin sends anonymous usage statistics to Google Analytics.</description>
+      <description>The Cura ThingiBrowser is a Cura plugin that adds the ability to directly import 3D models from popular online repositories into Cura.&#xA;The plugin sends anonymous usage statistics to Google Analytics.</description>
     </item>
-    
     <item>
       <title>Homey Enphase</title>
       <link>https://christerbeke.com/projects/homey-enphase/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/projects/homey-enphase/</guid>
       <description>The Homey Enphase App adds support for Enphase Envoy gateways to Homey. This allows you to track solar production in Homey, and create automations based on it.</description>
     </item>
-    
     <item>
       <title>Kerbal Operating System</title>
       <link>https://christerbeke.com/projects/kerbal-operating-system/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/projects/kerbal-operating-system/</guid>
       <description>Kerbal Operating System scripts aims to make it easier to write and configure mission profiles for Kerbal Operating System. By defining models and nesting and chaining those in a mission sequence, new missions can be defined and launched with just a few lines of code.</description>
     </item>
-    
   </channel>
 </rss>

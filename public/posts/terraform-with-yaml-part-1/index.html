@@ -17,8 +17,7 @@
 Terraform is one of the most common tools to provision infrastructure from code or configuration. However it&rsquo;s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.">
 <meta name="keywords" content="blog,developer,personal">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Terraform with YAML: Part 1"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Terraform with YAML: Part 1"/>
 <meta name="twitter:description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
 Terraform is one of the most common tools to provision infrastructure from code or configuration. However it&rsquo;s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so."/>
 
@@ -192,7 +191,7 @@ In this blog post we will explore how we can replace as much HCL code as possibl
 <p>One of the best properties of YAML in my opinion is the absence of syntax overhead.
 It allows you to consicely write down parameters and values.
 Let&rsquo;s look at a comparison of some HCL code and YAML where we configure some Google Pub/Sub topics and subscriptions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
 </span></span><span style="display:flex;"><span>  config = {
 </span></span><span style="display:flex;"><span>    topics = [
 </span></span><span style="display:flex;"><span>      {
@@ -210,7 +209,7 @@ Let&rsquo;s look at a comparison of some HCL code and YAML where we configure so
 </span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">topics</span>:<span style="color:#6e7681">
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">topics</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-topic</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">labels</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">environment</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">prod</span><span style="color:#6e7681">
@@ -220,7 +219,7 @@ Let&rsquo;s look at a comparison of some HCL code and YAML where we configure so
 Of course this will change once we add some HCL code to import the YAML configuration, but it quickly adds up when your infrastructure grows.</p>
 <p>Loading and converting the YAML file to HCL is very easy.
 You can do it in one line even using the <code>yamldecode</code> and <code>file</code> functions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
 </span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The result is an HCL represenation of the same data as shown in the earlier example.</p>
@@ -241,14 +240,14 @@ This provides a self-sufficient environment for application or data teams that w
   </a>
 </h2>
 <p>Let&rsquo;s build a fully working example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">id</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-project-id</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">region</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">europe-west4</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">bucket</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-123</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">EU</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
 </span></span><span style="display:flex;"><span>  required_providers {
 </span></span><span style="display:flex;"><span>    google = {
 </span></span><span style="display:flex;"><span>      source  = <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
@@ -282,7 +281,7 @@ We use two separate root objects (<code>project</code> and <code>bucket</code>) 
 </h2>
 <p>Often we want to configure multiple resources, for example different storage buckets for different applications.
 Let&rsquo;s adjust the example above to use a <code>for_each</code> loop:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">id</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-project-id</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">region</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">europe-west4</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">buckets</span>:<span style="color:#6e7681">
@@ -292,7 +291,7 @@ Let&rsquo;s adjust the example above to use a <code>for_each</code> loop:</p>
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-456</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">US</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">false</span><span style="color:#6e7681">
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
 </span></span><span style="display:flex;"><span>  required_providers {
 </span></span><span style="display:flex;"><span>    google = {
 </span></span><span style="display:flex;"><span>      source  = <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>

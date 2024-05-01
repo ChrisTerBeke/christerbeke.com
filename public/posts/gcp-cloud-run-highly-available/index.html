@@ -17,8 +17,7 @@
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.">
 <meta name="keywords" content="blog,developer,personal">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="A minimal setup for a high availability service using Cloud Run"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="A minimal setup for a high availability service using Cloud Run"/>
 <meta name="twitter:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions."/>
 
@@ -187,7 +186,7 @@ The main reasons to deploy your service in more than one region are:</p>
 </h2>
 <p>A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.
 Luckily using a Terraform <code>for_each</code> loop, this does not add too much additional configuration:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
 </span></span><span style="display:flex;"><span>  locations = [<span style="color:#a5d6ff">&#34;europe-west4&#34;</span>, <span style="color:#a5d6ff">&#34;europe-west1&#34;</span>]
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#ff7b72">
@@ -215,7 +214,7 @@ However this points to a single Cloud Run service, and for a multi-region set we
 To do this, we will need to create a Global Load Balancer that uses <a href="https://cloud.google.com/load-balancing/docs/negs/serverless-neg-concepts"  class="external-link" target="_blank" rel="noopener">Serverless Network Endpoint Groups</a> (NEGs) as backend.
 These NEGs then route the traffic to the Cloud Run instances.</p>
 <p>Let’s set up the needed resource for our ingress stack:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_compute_global_address&#34;</span> <span style="color:#a5d6ff">&#34;ip&#34;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_compute_global_address&#34;</span> <span style="color:#a5d6ff">&#34;ip&#34;</span> {
 </span></span><span style="display:flex;"><span>  name = <span style="color:#a5d6ff">&#34;service-ip&#34;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#ff7b72">
@@ -264,7 +263,7 @@ These NEGs then route the traffic to the Cloud Run instances.</p>
 <p>Notice how we are re-using local.locations to create the regional resources.</p>
 </blockquote>
 <p>No one can call our service yet though, because we need to tell GCP that this is a public service that can be invoked by everyone:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">data</span> <span style="color:#a5d6ff">&#34;google_iam_policy&#34;</span> <span style="color:#a5d6ff">&#34;noauth&#34;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">data</span> <span style="color:#a5d6ff">&#34;google_iam_policy&#34;</span> <span style="color:#a5d6ff">&#34;noauth&#34;</span> {
 </span></span><span style="display:flex;"><span>  binding {
 </span></span><span style="display:flex;"><span>    role    = <span style="color:#a5d6ff">&#34;roles/run.invoker&#34;</span>
 </span></span><span style="display:flex;"><span>    members = [<span style="color:#a5d6ff">&#34;allUsers&#34;</span>]
@@ -286,7 +285,7 @@ These NEGs then route the traffic to the Cloud Run instances.</p>
   </a>
 </h2>
 <p>Let’s add an output for the static IP address so we know what to call after deployment:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">output</span> <span style="color:#a5d6ff">&#34;static_ip&#34;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">output</span> <span style="color:#a5d6ff">&#34;static_ip&#34;</span> {
 </span></span><span style="display:flex;"><span>  value = google_compute_global_address.ip.address
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Now run <code>terraform apply</code> to deploy everything and validate that it returns the &ldquo;Hello World&rdquo; container (for example using <code>curl $(terraform output --raw static_ip)</code>).</p>
@@ -303,7 +302,7 @@ These NEGs then route the traffic to the Cloud Run instances.</p>
 <p>To prevent static assets from being served from your container, you can enable Cloud CDN to automatically serve these from Cloud Storage edge locations instead of the container itself.
 Cloud CDN will automatically detect which routes are static resources, but you can manually override this configuration as well.</p>
 <p>Simply add the <code>enable_cnd</code> flag to the backend service resource:</p>
-<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_compute_backend_service&#34;</span> <span style="color:#a5d6ff">&#34;backend&#34;</span> {
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_compute_backend_service&#34;</span> <span style="color:#a5d6ff">&#34;backend&#34;</span> {
 </span></span><span style="display:flex;"><span>  name       = <span style="color:#a5d6ff">&#34;backend&#34;</span>
 </span></span><span style="display:flex;"><span>  protocol   = <span style="color:#a5d6ff">&#34;HTTP&#34;</span>
 </span></span><span style="display:flex;"><span>  enable_cdn = <span style="color:#79c0ff">true</span>

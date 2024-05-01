@@ -6,57 +6,42 @@
     <description>Recent content in Google Cloud Platform on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jul 2023 08:00:00 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jul 2023 08:00:00 +0100</lastBuildDate>
+    <atom:link href="https://christerbeke.com/tags/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraform with YAML: Part 2</title>
       <link>https://christerbeke.com/posts/terraform-with-yaml-part-2/</link>
       <pubDate>Fri, 14 Jul 2023 08:00:00 +0100</pubDate>
-      
       <guid>https://christerbeke.com/posts/terraform-with-yaml-part-2/</guid>
-      <description>This post is the second in a series of three about supercharging your Terraform setup using YAML.
-In part one of this series we learned how to use YAML to simplify the configuration of Terraform resources. We mainly focussed on reducing syntax overhead of the HCL language and making the configuration accessible to non-infra engineers.
-In this second part we will dive into some more advanced techniques and patterns.</description>
+      <description>This post is the second in a series of three about supercharging your Terraform setup using YAML.&#xA;In part one of this series we learned how to use YAML to simplify the configuration of Terraform resources. We mainly focussed on reducing syntax overhead of the HCL language and making the configuration accessible to non-infra engineers.&#xA;In this second part we will dive into some more advanced techniques and patterns.</description>
     </item>
-    
     <item>
       <title>Terraform with YAML: Part 1</title>
       <link>https://christerbeke.com/posts/terraform-with-yaml-part-1/</link>
       <pubDate>Tue, 14 Mar 2023 08:00:00 +0100</pubDate>
-      
       <guid>https://christerbeke.com/posts/terraform-with-yaml-part-1/</guid>
-      <description>This post is the first in a series of three about supercharging your Terraform setup using YAML.
-Terraform is one of the most common tools to provision infrastructure from code or configuration. However it&amp;rsquo;s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.</description>
+      <description>This post is the first in a series of three about supercharging your Terraform setup using YAML.&#xA;Terraform is one of the most common tools to provision infrastructure from code or configuration. However it&amp;rsquo;s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.</description>
     </item>
-    
     <item>
       <title>Creating a non-classic Google Cloud Global Load Balancer with Terraform</title>
       <link>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</link>
       <pubDate>Fri, 16 Sep 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/posts/gcp-non-classic-load-balancer/</guid>
-      <description>The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.
-The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources.</description>
+      <description>The Google Cloud Terraform Provider has resources to configure a Global External HTTP(S) Load Balancer. By default however this creates a classic load balancer, not a new one. For new features like traffic management you cannot use the classic load balancer, so you definitely want to use the new one.&#xA;The Google and Terraform documentation is not clear about how to do this properly. The name classic does not even appear once on the documentation pages for the relevant resources.</description>
     </item>
-    
     <item>
       <title>A declarative approach for Dataflow Flex Templates</title>
       <link>https://christerbeke.com/posts/gcp-dataflow-terraform/</link>
       <pubDate>Thu, 28 Jul 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/posts/gcp-dataflow-terraform/</guid>
-      <description>Google Cloud offers a managed Apache Beam solution called Dataflow. Since some time now Dataflow has a feature called Flex Templates. Flex Templates use Docker containers instead of Dataflow&amp;rsquo;s custom templates. The benefit is that Docker is a known standard and the container can run in different environments. However, a custom metadata JSON file is still needed to point to the Docker image in your registry.
-Both the CLI and the Terraform approach require you to push the Docker image to a registry.</description>
+      <description>Google Cloud offers a managed Apache Beam solution called Dataflow. Since some time now Dataflow has a feature called Flex Templates. Flex Templates use Docker containers instead of Dataflow&amp;rsquo;s custom templates. The benefit is that Docker is a known standard and the container can run in different environments. However, a custom metadata JSON file is still needed to point to the Docker image in your registry.&#xA;Both the CLI and the Terraform approach require you to push the Docker image to a registry.</description>
     </item>
-    
     <item>
       <title>A minimal setup for a high availability service using Cloud Run</title>
       <link>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</link>
       <pubDate>Tue, 11 Jan 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</guid>
-      <description>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
-Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.</description>
+      <description>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:&#xA;Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.</description>
     </item>
-    
   </channel>
 </rss>

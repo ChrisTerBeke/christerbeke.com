@@ -6,15 +6,14 @@
     <description>Recent content in Homey on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate><atom:link href="https://christerbeke.com/tags/homey/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Dec 2022 08:41:01 +0100</lastBuildDate>
+    <atom:link href="https://christerbeke.com/tags/homey/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homey Enphase</title>
       <link>https://christerbeke.com/projects/homey-enphase/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
-      
       <guid>https://christerbeke.com/projects/homey-enphase/</guid>
       <description>The Homey Enphase App adds support for Enphase Envoy gateways to Homey. This allows you to track solar production in Homey, and create automations based on it.</description>
     </item>
-    
   </channel>
 </rss>
