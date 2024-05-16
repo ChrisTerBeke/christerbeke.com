@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Chris ter Beke</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2024 08:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2024 08:00:00 +0100</lastBuildDate>
     <atom:link href="https://christerbeke.com/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Homey Remeha</title>
+      <link>https://christerbeke.com/projects/homey-remeha/</link>
+      <pubDate>Thu, 16 May 2024 08:00:00 +0100</pubDate>
+      <guid>https://christerbeke.com/projects/homey-remeha/</guid>
+      <description>The Homey Remeha Home App adds support for Remeha Home to Homey. This allows you to monitor and control your Remeha thermostat, heat pump or gas boiler.</description>
+    </item>
     <item>
       <title>Homey Uponor</title>
       <link>https://christerbeke.com/projects/homey-uponor/</link>
