@@ -3,15 +3,13 @@ title: "About"
 date: 2022-12-20T19:49:05+01:00
 ---
 
-## Writer @ The Progressive Architect (2024 - now)
+## Lead Architect @ IJsvogel Retail (2024 - now)
 
-The Progressive Architect focuses on how leaders and architects in the technology field should address friction points, delivery overhead, minimize waste, provide optimal abstractions and help teams to operate autonomously — ranging from large enterprises to start-ups.
+[IJsvogel Retail](https://ijsvogelretail.nl) is the leading retailer in the Netherlands for pet supplies, with over 150 stores and a webshop. As Lead Architect, I am responsible for the architecture of the IT landscape, including the webshop and the data platform.
 
-[Read our articles on Substack](https://theprogressivearchitect.substack.com/)
+## Cloud Consultant @ Xebia Cloud (2022 - 2024)
 
-## Cloud Consultant @ Xebia Cloud (2022 - now)
-
-Part of [Xebia Cloud](https://xebia.com/digital-transformation/cloud/) organizes your cloud journey, develops cloud native solutions, trains your teams, and provides managed cloud services.
+[Xebia Cloud](https://xebia.com/digital-transformation/cloud/) organizes your cloud journey, develops cloud native solutions, trains your teams, and provides managed cloud services.
 As cloud consultant, I help customers in different industries bring their applications to the cloud, specifically focussing on Google Cloud Platform.
 
 [Read my articles on xebia.com](https://xebia.com/blog/author/chris-ter-beke/)
