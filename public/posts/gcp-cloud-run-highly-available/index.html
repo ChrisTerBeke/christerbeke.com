@@ -17,18 +17,24 @@
 Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.">
 <meta name="keywords" content="blog,developer,personal">
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="A minimal setup for a high availability service using Cloud Run"/>
-<meta name="twitter:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
-Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions."/>
 
-<meta property="og:title" content="A minimal setup for a high availability service using Cloud Run" />
-<meta property="og:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
-Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://christerbeke.com/posts/gcp-cloud-run-highly-available/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-11T08:41:01+01:00" />
-<meta property="article:modified_time" content="2022-01-11T08:41:01+01:00" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="A minimal setup for a high availability service using Cloud Run">
+  <meta name="twitter:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.">
 
+<meta property="og:url" content="https://christerbeke.com/posts/gcp-cloud-run-highly-available/">
+  <meta property="og:site_name" content="Chris ter Beke">
+  <meta property="og:title" content="A minimal setup for a high availability service using Cloud Run">
+  <meta property="og:description" content="In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:
+Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-01-11T08:41:01+01:00">
+    <meta property="article:modified_time" content="2022-01-11T08:41:01+01:00">
+    <meta property="article:tag" content="Google Cloud Platform">
+    <meta property="article:tag" content="Terraform">
 
 
 
@@ -375,6 +381,9 @@ The <code>for_each</code> loop feature of Terraform makes this very easy to set 
 
 
   
+  
+
+
 
   
 
@@ -391,15 +400,6 @@ The <code>for_each</code> loop feature of Terraform makes this very easy to set 
   
 
   
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NNMPKC7KTB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NNMPKC7KTB');
-</script>
-
 
   
 

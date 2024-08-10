@@ -5,7 +5,7 @@ date: 2022-12-20T19:49:05+01:00
 
 ## Lead Architect @ IJsvogel Retail (2024 - now)
 
-[IJsvogel Retail](https://ijsvogelretail.nl) is the leading retailer in the Netherlands for pet supplies, with over 150 stores and a webshop. As Lead Architect, I am responsible for the architecture of the IT landscape, including the webshop and the data platform.
+[IJsvogel Retail](https://ijsvogelretail.nl) is the leading retailer in the Netherlands for pet supplies, with over 150 stores and a webshop. As Lead Architect, I am responsible for the architecture of the IT landscape, which includes an e-commerce platform, data platform and integration platforms.
 
 ## Cloud Consultant @ Xebia Cloud (2022 - 2024)
 
