@@ -7,11 +7,11 @@ theme = "hugo-coder"
 [[headers]]
 for = "/*"
 [headers.values]
-Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' google-analytics.com googletagmanager.com githubusercontent.com;"
+Content-Security-Policy = "default-src 'self' 'unsafe-eval' 'unsafe-inline' githubusercontent.com;"
 
 [params]
 author = "Chris ter Beke"
-info = "Challenge, Subtract, Simplify, Accelerate, Automate"
+info = "Question, Delete, Simplify, Accelerate, Automate"
 description = "Certified Cloud Architect and Agile Developer"
 keywords = "blog,developer,personal"
 avatarurl = "https://avatars3.githubusercontent.com/u/1134120?s=400&u=fe77552dc88f20e71d85826c36a4e36f123df5f8&v=4"
@@ -20,9 +20,6 @@ colorScheme = "auto"
 
 [taxonomies]
 tag = "tags"
-
-[params.googleTagManager]
-id = "G-NNMPKC7KTB"
 
 [markup]
 [markup.highlight]

@@ -4,7 +4,7 @@
     <title>Google Cloud Platform on Chris ter Beke</title>
     <link>https://christerbeke.com/tags/google-cloud-platform/</link>
     <description>Recent content in Google Cloud Platform on Chris ter Beke</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jul 2023 08:00:00 +0100</lastBuildDate>
     <atom:link href="https://christerbeke.com/tags/google-cloud-platform/index.xml" rel="self" type="application/rss+xml" />
@@ -41,7 +41,7 @@
       <link>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</link>
       <pubDate>Tue, 11 Jan 2022 08:41:01 +0100</pubDate>
       <guid>https://christerbeke.com/posts/gcp-cloud-run-highly-available/</guid>
-      <description>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:&#xA;Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments Link to heading A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.</description>
+      <description>In this blog post, I will explain what is needed to set up a web service that runs in multiple GCP regions. The main reasons to deploy your service in more than one region are:&#xA;Handle single-region failures so that your application is highly available. Route traffic to the nearest region so your users experience faster loading times. Create Cloud Run deployments A Cloud Run service only lives in a single region, so for a multi-region setup we will need to deploy the same container in multiple regions.</description>
     </item>
   </channel>
 </rss>
