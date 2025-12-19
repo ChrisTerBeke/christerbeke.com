@@ -13,7 +13,7 @@
       <link>https://christerbeke.com/projects/kerbal-operating-system/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
       <guid>https://christerbeke.com/projects/kerbal-operating-system/</guid>
-      <description>Kerbal Operating System scripts aims to make it easier to write and configure mission profiles for Kerbal Operating System. By defining models and nesting and chaining those in a mission sequence, new missions can be defined and launched with just a few lines of code.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ChrisTerBeke/kOS&#34;&gt;Kerbal Operating System scripts&lt;/a&gt; aims to make it easier to write and configure mission profiles for &lt;a href=&#34;https://ksp-kos.github.io/KOS/&#34;&gt;Kerbal Operating System&lt;/a&gt;.&#xA;By defining models and nesting and chaining those in a mission sequence, new missions can be defined and launched with just a few lines of code.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

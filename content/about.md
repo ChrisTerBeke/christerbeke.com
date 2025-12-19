@@ -3,9 +3,15 @@ title: "About"
 date: 2022-12-20T19:49:05+01:00
 ---
 
-## Lead Architect @ IJsvogel Retail (2024 - now)
+## Head of IT @ IJsvogel Retail (2025 - now)
 
-[IJsvogel Retail](https://ijsvogelretail.nl) is the leading retailer in the Netherlands for pet supplies, with over 150 stores and a webshop. As Lead Architect, I am responsible for the architecture of the IT landscape, which includes an e-commerce platform, data platform and integration platforms.
+[IJsvogel Retail](https://ijsvogelretail.nl) is the leading retailer in the Netherlands for pet supplies, with over 170 stores and multiple e-commerce channels.
+As Head of IT, I am responsible for overseeing the organization's technology infrastructure, systems, and digital strategy to ensure seamless integration across online and in-store channels. This includes driving IT initiatives for e-commerce, inventory management, data analytics, cybersecurity, and supply chain optimization while aligning technology investments with business goals to enhance operational efficiency and support revenue growth.
+
+## Lead Architect @ IJsvogel Retail (2024 - 2025)
+
+[IJsvogel Retail](https://ijsvogelretail.nl) is the leading retailer in the Netherlands for pet supplies, with over 170 stores and multiple e-commerce channels.
+As Lead Architect, I am responsible for the architecture of the IT landscape, which includes an e-commerce platform, data platform and integration platforms.
 
 ## Cloud Consultant @ Xebia Cloud (2022 - 2024)
 
