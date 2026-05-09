@@ -13,22 +13,39 @@
 
 
 <meta name="author" content="Chris ter Beke">
-<meta name="description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
-Terraform is one of the most common tools to provision infrastructure from code or configuration. However it&rsquo;s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.">
+<meta name="description" content="
+This post is the first in a series of three about supercharging your Terraform setup using YAML.
+
+Terraform is one of the most common tools to provision infrastructure from code or configuration.
+However it&rsquo;s using a custom language called HCL (Hashicorp Configuration Language).
+In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.
+
+  Why YAML?
+  
+    
+    Link to heading
+  
+
+One of the best properties of YAML in my opinion is the absence of syntax overhead.
+It allows you to consicely write down parameters and values.
+Let&rsquo;s look at a comparison of some HCL code and YAML where we configure some Google Pub/Sub topics and subscriptions:">
 <meta name="keywords" content="blog,developer,personal">
+
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Terraform with YAML: Part 1">
   <meta name="twitter:description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
-Terraform is one of the most common tools to provision infrastructure from code or configuration. However it’s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.">
+Terraform is one of the most common tools to provision infrastructure from code or configuration. However it’s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.
+Why YAML? Link to heading One of the best properties of YAML in my opinion is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let’s look at a comparison of some HCL code and YAML where we configure some Google Pub/Sub topics and subscriptions:">
 
 <meta property="og:url" content="https://christerbeke.com/posts/terraform-with-yaml-part-1/">
   <meta property="og:site_name" content="Chris ter Beke">
   <meta property="og:title" content="Terraform with YAML: Part 1">
   <meta property="og:description" content="This post is the first in a series of three about supercharging your Terraform setup using YAML.
-Terraform is one of the most common tools to provision infrastructure from code or configuration. However it’s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.">
-  <meta property="og:locale" content="en_us">
+Terraform is one of the most common tools to provision infrastructure from code or configuration. However it’s using a custom language called HCL (Hashicorp Configuration Language). In this blog post we will explore how we can replace as much HCL code as possible with YAML and what the benefits are of doing so.
+Why YAML? Link to heading One of the best properties of YAML in my opinion is the absence of syntax overhead. It allows you to consicely write down parameters and values. Let’s look at a comparison of some HCL code and YAML where we configure some Google Pub/Sub topics and subscriptions:">
+  <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2023-03-14T08:00:00+01:00">
@@ -50,7 +67,7 @@ Terraform is one of the most common tools to provision infrastructure from code 
 
   
   
-  <link rel="stylesheet" href="/css/coder.min.38c4552ac40f9ae3408bad40358f654ebd8804412fe74ed56f2d6c8a7af82dd3.css" integrity="sha256-OMRVKsQPmuNAi61ANY9lTr2IBEEv507Vby1sinr4LdM=" crossorigin="anonymous" media="screen" />
+  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -60,7 +77,7 @@ Terraform is one of the most common tools to provision infrastructure from code 
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -79,6 +96,7 @@ Terraform is one of the most common tools to provision infrastructure from code 
 
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
 
 
 
@@ -184,6 +202,9 @@ Terraform is one of the most common tools to provision infrastructure from code 
         </div>
       </header>
 
+      
+
+
       <div class="post-content">
         
         <blockquote>
@@ -202,25 +223,25 @@ In this blog post we will explore how we can replace as much HCL code as possibl
 <p>One of the best properties of YAML in my opinion is the absence of syntax overhead.
 It allows you to consicely write down parameters and values.
 Let&rsquo;s look at a comparison of some HCL code and YAML where we configure some Google Pub/Sub topics and subscriptions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
-</span></span><span style="display:flex;"><span>  config = {
-</span></span><span style="display:flex;"><span>    topics = [
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+</span></span><span style="display:flex;"><span>  config <span style="color:#ff7b72;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>    topics <span style="color:#ff7b72;font-weight:bold">=</span> [
 </span></span><span style="display:flex;"><span>      {
-</span></span><span style="display:flex;"><span>        name = <span style="color:#a5d6ff">&#34;my-topic&#34;</span>
-</span></span><span style="display:flex;"><span>        labels = {
-</span></span><span style="display:flex;"><span>          environment = <span style="color:#a5d6ff">&#34;prod&#34;</span>
+</span></span><span style="display:flex;"><span>        name <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;my-topic&#34;</span>
+</span></span><span style="display:flex;"><span>        labels <span style="color:#ff7b72;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>          environment <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;prod&#34;</span>
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        subscriptions = [
+</span></span><span style="display:flex;"><span>        subscriptions <span style="color:#ff7b72;font-weight:bold">=</span> [
 </span></span><span style="display:flex;"><span>          {
-</span></span><span style="display:flex;"><span>            name          = <span style="color:#a5d6ff">&#34;my-subscription&#34;</span>
-</span></span><span style="display:flex;"><span>            push_endpoint = <span style="color:#a5d6ff">&#34;https://example.com/push&#34;</span>
+</span></span><span style="display:flex;"><span>            name          <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;my-subscription&#34;</span>
+</span></span><span style="display:flex;"><span>            push_endpoint <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;https://example.com/push&#34;</span>
 </span></span><span style="display:flex;"><span>          }
 </span></span><span style="display:flex;"><span>        ]
 </span></span><span style="display:flex;"><span>      }
 </span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">topics</span>:<span style="color:#6e7681">
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">topics</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-topic</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">labels</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">        </span><span style="color:#7ee787">environment</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">prod</span><span style="color:#6e7681">
@@ -230,8 +251,8 @@ Let&rsquo;s look at a comparison of some HCL code and YAML where we configure so
 Of course this will change once we add some HCL code to import the YAML configuration, but it quickly adds up when your infrastructure grows.</p>
 <p>Loading and converting the YAML file to HCL is very easy.
 You can do it in one line even using the <code>yamldecode</code> and <code>file</code> functions:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
-</span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>locals {
+</span></span><span style="display:flex;"><span>  config <span style="color:#ff7b72;font-weight:bold">=</span> yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The result is an HCL represenation of the same data as shown in the earlier example.</p>
 <p>For this particular example, the total number of lines of code using plain HCL is 18, of which 9 are purely syntax.
@@ -251,35 +272,35 @@ This provides a self-sufficient environment for application or data teams that w
   </a>
 </h2>
 <p>Let&rsquo;s build a fully working example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">id</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-project-id</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">region</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">europe-west4</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">bucket</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#7ee787">bucket</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-123</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">EU</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
 </span></span><span style="display:flex;"><span>  required_providers {
-</span></span><span style="display:flex;"><span>    google = {
-</span></span><span style="display:flex;"><span>      source  = <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
-</span></span><span style="display:flex;"><span>      version = <span style="color:#a5d6ff">&#34;4.47.0&#34;</span>
+</span></span><span style="display:flex;"><span>    google <span style="color:#ff7b72;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>      source  <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
+</span></span><span style="display:flex;"><span>      version <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;4.47.0&#34;</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>locals {
-</span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
+</span></span><span style="display:flex;"><span>  config <span style="color:#ff7b72;font-weight:bold">=</span> yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
-</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">provider</span> <span style="color:#a5d6ff">&#34;google&#34;</span> {
-</span></span><span style="display:flex;"><span>  project = config.project.id
-</span></span><span style="display:flex;"><span>  region  = config.project.region
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">provider</span> <span style="color:#a5d6ff">&#34;google&#34;</span> {
+</span></span><span style="display:flex;"><span>  project <span style="color:#ff7b72;font-weight:bold">=</span> config.project.id
+</span></span><span style="display:flex;"><span>  region  <span style="color:#ff7b72;font-weight:bold">=</span> config.project.region
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
-</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_storage_bucket&#34;</span> <span style="color:#a5d6ff">&#34;bucket&#34;</span> {
-</span></span><span style="display:flex;"><span>  name          = config.bucket.name
-</span></span><span style="display:flex;"><span>  location      = config.bucket.location
-</span></span><span style="display:flex;"><span>  force_destroy = config.bucket.force_destroy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_storage_bucket&#34;</span> <span style="color:#a5d6ff">&#34;bucket&#34;</span> {
+</span></span><span style="display:flex;"><span>  name          <span style="color:#ff7b72;font-weight:bold">=</span> config.bucket.name
+</span></span><span style="display:flex;"><span>  location      <span style="color:#ff7b72;font-weight:bold">=</span> config.bucket.location
+</span></span><span style="display:flex;"><span>  force_destroy <span style="color:#ff7b72;font-weight:bold">=</span> config.bucket.force_destroy
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In this example, we create and configure a Cloud Storage bucket.
 We use two separate root objects (<code>project</code> and <code>bucket</code>) to keep the config tidy and readable.</p>
@@ -292,40 +313,40 @@ We use two separate root objects (<code>project</code> and <code>bucket</code>) 
 </h2>
 <p>Often we want to configure multiple resources, for example different storage buckets for different applications.
 Let&rsquo;s adjust the example above to use a <code>for_each</code> loop:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">project</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">id</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">my-project-id</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">region</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">europe-west4</span><span style="color:#6e7681">
-</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">buckets</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#7ee787">buckets</span>:<span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-123</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">EU</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">true</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span>- <span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">example-bucket-456</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">location</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">US</span><span style="color:#6e7681">
 </span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">force_destroy</span>:<span style="color:#6e7681"> </span><span style="color:#79c0ff">false</span><span style="color:#6e7681">
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span>terraform {
 </span></span><span style="display:flex;"><span>  required_providers {
-</span></span><span style="display:flex;"><span>    google = {
-</span></span><span style="display:flex;"><span>      source  = <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
-</span></span><span style="display:flex;"><span>      version = <span style="color:#a5d6ff">&#34;4.47.0&#34;</span>
+</span></span><span style="display:flex;"><span>    google <span style="color:#ff7b72;font-weight:bold">=</span> {
+</span></span><span style="display:flex;"><span>      source  <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;hashicorp/google&#34;</span>
+</span></span><span style="display:flex;"><span>      version <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#34;4.47.0&#34;</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>locals {
-</span></span><span style="display:flex;"><span>  config = yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
+</span></span><span style="display:flex;"><span>  config <span style="color:#ff7b72;font-weight:bold">=</span> yamldecode(file(<span style="color:#a5d6ff">&#34;config.yaml&#34;</span>))
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
-</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">provider</span> <span style="color:#a5d6ff">&#34;google&#34;</span> {
-</span></span><span style="display:flex;"><span>  project = config.project.id
-</span></span><span style="display:flex;"><span>  region  = config.project.region
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#ff7b72">
-</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_storage_bucket&#34;</span> <span style="color:#a5d6ff">&#34;bucket&#34;</span> {
-</span></span><span style="display:flex;"><span>  for_each = toset(config.buckets)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  name          = each.value.name
-</span></span><span style="display:flex;"><span>  location      = each.value.location
-</span></span><span style="display:flex;"><span>  force_destroy = each.value.force_destroy
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">provider</span> <span style="color:#a5d6ff">&#34;google&#34;</span> {
+</span></span><span style="display:flex;"><span>  project <span style="color:#ff7b72;font-weight:bold">=</span> config.project.id
+</span></span><span style="display:flex;"><span>  region  <span style="color:#ff7b72;font-weight:bold">=</span> config.project.region
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">resource</span> <span style="color:#a5d6ff">&#34;google_storage_bucket&#34;</span> <span style="color:#a5d6ff">&#34;bucket&#34;</span> {
+</span></span><span style="display:flex;"><span>  for_each <span style="color:#ff7b72;font-weight:bold">=</span> toset(config.buckets)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  name          <span style="color:#ff7b72;font-weight:bold">=</span> each.value.name
+</span></span><span style="display:flex;"><span>  location      <span style="color:#ff7b72;font-weight:bold">=</span> each.value.location
+</span></span><span style="display:flex;"><span>  force_destroy <span style="color:#ff7b72;font-weight:bold">=</span> each.value.force_destroy
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>As you can see, with minimal extra code, we can now provision as many buckets as we want.</p>
 <h2 id="up-next">
@@ -351,7 +372,6 @@ As a bonus we will look into validating YAML files using a schema to get early f
         
         
         
-
         
         
       </footer>
@@ -366,7 +386,9 @@ As a bonus we will look into validating YAML files using a schema to get early f
   <section class="container">
     ©
     
-    2024
+      1993 -
+    
+    2026
      Chris ter Beke 
     ·
     
@@ -388,11 +410,11 @@ As a bonus we will look into validating YAML files using a schema to get early f
 
   
 
-
-  
   
 
+  
 
+  
 
   
 

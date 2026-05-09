@@ -5,7 +5,7 @@
     <link>https://christerbeke.com/tags/homey/</link>
     <description>Recent content in Homey on Chris ter Beke</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 16 May 2024 08:00:00 +0100</lastBuildDate>
     <atom:link href="https://christerbeke.com/tags/homey/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,21 +13,21 @@
       <link>https://christerbeke.com/projects/homey-remeha/</link>
       <pubDate>Thu, 16 May 2024 08:00:00 +0100</pubDate>
       <guid>https://christerbeke.com/projects/homey-remeha/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ChrisTerBeke/homey-remeha&#34;&gt;Homey Remeha Home App&lt;/a&gt; adds support for &lt;a href=&#34;https://www.remeha.nl/product/etwist-app-vernieuwd&#34;&gt;Remeha Home&lt;/a&gt; to &lt;a href=&#34;https://homey.app/en-us/&#34;&gt;Homey&lt;/a&gt;.&#xA;This allows you to monitor and control your Remeha thermostat, heat pump or gas boiler.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ChrisTerBeke/homey-remeha&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homey Remeha Home App&lt;/a&gt; adds support for &lt;a href=&#34;https://www.remeha.nl/product/etwist-app-vernieuwd&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Remeha Home&lt;/a&gt; to &lt;a href=&#34;https://homey.app/en-us/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homey&lt;/a&gt;.&#xA;This allows you to monitor and control your Remeha thermostat, heat pump or gas boiler.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Homey Uponor</title>
       <link>https://christerbeke.com/projects/homey-uponor/</link>
       <pubDate>Wed, 01 May 2024 08:00:00 +0100</pubDate>
       <guid>https://christerbeke.com/projects/homey-uponor/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ChrisTerBeke/homey-uponor&#34;&gt;Homey Uponor Smatrix App&lt;/a&gt; adds support for &lt;a href=&#34;https://www.uponor.com/nl-nl/producten/ruimtetemperatuurregeling/smatrix-regelsysteem&#34;&gt;Uponor Smatrix&lt;/a&gt; to &lt;a href=&#34;https://homey.app/en-us/&#34;&gt;Homey&lt;/a&gt;.&#xA;This allows you to monitor and control your underfloor heating thermostats for every room.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ChrisTerBeke/homey-uponor&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homey Uponor Smatrix App&lt;/a&gt; adds support for &lt;a href=&#34;https://www.uponor.com/nl-nl/producten/ruimtetemperatuurregeling/smatrix-regelsysteem&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Uponor Smatrix&lt;/a&gt; to &lt;a href=&#34;https://homey.app/en-us/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homey&lt;/a&gt;.&#xA;This allows you to monitor and control your underfloor heating thermostats for every room.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Homey Enphase</title>
       <link>https://christerbeke.com/projects/homey-enphase/</link>
       <pubDate>Fri, 30 Dec 2022 08:41:01 +0100</pubDate>
       <guid>https://christerbeke.com/projects/homey-enphase/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ChrisTerBeke/homey-enphase&#34;&gt;Homey Enphase App&lt;/a&gt; adds support for &lt;a href=&#34;https://www4.enphase.com/nl-nl/producten-en-services/envoy&#34;&gt;Enphase Envoy&lt;/a&gt; gateways to &lt;a href=&#34;https://homey.app/en-us/&#34;&gt;Homey&lt;/a&gt;.&#xA;This allows you to track solar production in Homey, and create automations based on it.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/ChrisTerBeke/homey-enphase&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homey Enphase App&lt;/a&gt; adds support for &lt;a href=&#34;https://www4.enphase.com/nl-nl/producten-en-services/envoy&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Enphase Envoy&lt;/a&gt; gateways to &lt;a href=&#34;https://homey.app/en-us/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Homey&lt;/a&gt;.&#xA;This allows you to track solar production in Homey, and create automations based on it.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

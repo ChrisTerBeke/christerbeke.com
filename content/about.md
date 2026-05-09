@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2022-12-20T19:49:05+01:00
+date: 2025-12-19T20:00:00+01:00
 ---
 
 ## Head of IT @ IJsvogel Retail (2025 - now)
